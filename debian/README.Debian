@@ -1,0 +1,19 @@
+
+SoundTouch on Debian
+====================
+
+This is the Debian version of the SoundTouch library. On Debian the
+library comes with two flavours, the float and the integer version. 
+
+The default version is float, if you want to compile with float
+you do not have to do anything.
+
+In order to compile and link with the integer version you have to
+define INTEGER_SAMPLES during compilation. 
+Then you have to  link with the integer version of the library,
+which is called libSoundTouch_i: -lSoundTouch_i
+
+Suggestions for improving this welcome.
+
+Guenter Geiger
+

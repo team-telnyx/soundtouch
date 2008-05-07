@@ -1,0 +1,38 @@
+Source: soundtouch
+Priority: optional
+Section: libs
+Maintainer: Guenter Geiger (Debian/GNU) <geiger@debian.org>
+Build-Depends: debhelper (>= 4.0.0), cdbs (>= 0.4.52), unzip, automake1.9, libtool, autoconf
+Standards-Version: 3.7.3
+
+Package: libsoundtouch1-dev
+Section: libdevel
+Architecture: any
+Conflicts: libsoundtouch0-dev
+Provides: libsoundtouch-dev
+Depends: libsoundtouch1c2 (= ${binary:Version})
+Description: development files for sound stretching library
+ SoundTouch is a library that that can be used to change pitch and time
+ of soundfiles independently.
+
+Package: libsoundtouch1c2
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Replaces: libsoundtouch1
+Conflicts: libsoundtouch1
+Description: sound stretching library
+ SoundTouch is a library that that can be used to change pitch and time
+ of soundfiles independently.
+
+Package: soundstretch
+Section: sound
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Stretches and pitch-shifts sound independently
+ This program can strech and pitch-shift .wav-files independently. 
+ This is especially useful for musicians, who want to listen to a song
+ played slowly, without having the pitch altered.
+ .
+ This program uses libsoundtouch for the actual work
+
