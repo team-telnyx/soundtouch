@@ -1,19 +1,31 @@
 #!/usr/bin/make -f
 
-DEB_TAR_SRCDIR := soundtouch-1.3.1
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+DEB_HOST_ARCH ?= $(shell dpkg-architecture -qDEB_HOST_ARCH)
 
-include /usr/share/cdbs/1/rules/tarball.mk
-include /usr/share/cdbs/1/rules/debhelper.mk
-include /usr/share/cdbs/1/class/autotools.mk
-include /usr/share/cdbs/1/rules/simple-patchsys.mk
+override_dh_auto_configure:
+        ifeq ($(DEB_HOST_ARCH), amd64)
+		dh_auto_configure -- CC='gcc -m32' CXX='g++ -m32' \
+                                   --enable-shared=yes \
+                                   --bindir=\$${prefix}/bin32 \
+                                   --libexecdir=\$${prefix}/lib32/soundtouch \
+                                   --libdir=\$${prefix}/lib32
+		$(MAKE)
+		$(MAKE) install DESTDIR=$(CURDIR)/debian/tmp
+		$(MAKE) clean
+        endif
 
-DEB_AC_AUX_DIR = $(DEB_SRCDIR)/config
-DEB_AUTO_UPDATE_ACLOCAL := 1.9
-DEB_AUTO_UPDATE_LIBTOOL := pre
-DEB_AUTO_UPDATE_AUTOCONF := 2.50
-DEB_AUTO_UPDATE_AUTOMAKE := 1.9
-DEB_AUTOMAKE_ARGS := --foreign
+	dh_auto_configure -- --enable-shared=yes
 
-DEB_DH_MAKESHLIBS_ARGS := -V
-DEB_CONFIGURE_EXTRA_FLAGS := --enable-shared=yes
+override_dh_prep:
+	dh_prep --exclude=debian/tmp
 
+override_dh_installdocs:
+	dh_installdocs -plibsoundtouch0 -psoundstretch
+
+override_dh_installchangelogs:
+	dh_installchangelogs -plibsoundtouch0 -psoundstretch
+
+%:
+	dh $@ --with autoreconf

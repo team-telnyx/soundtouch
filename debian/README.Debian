@@ -13,7 +13,7 @@ define INTEGER_SAMPLES during compilation.
 Then you have to  link with the integer version of the library,
 which is called libSoundTouch_i: -lSoundTouch_i
 
-Suggestions for improving this welcome.
+Suggestions for improving this are welcome.
 
 Guenter Geiger
 

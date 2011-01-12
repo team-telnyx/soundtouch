@@ -1,12 +1,17 @@
-diff -ruN SoundTouch-1.2.1-old/source/SoundTouch/cpu_detect_x86_gcc.cpp SoundTouch-1.2.1/source/SoundTouch/cpu_detect_x86_gcc.cpp
---- SoundTouch-1.2.1-old/source/SoundTouch/cpu_detect_x86_gcc.cpp	2003-12-27 13:04:38.000000000 +0100
-+++ SoundTouch-1.2.1/source/SoundTouch/cpu_detect_x86_gcc.cpp	2004-08-25 17:37:02.000000000 +0200
-@@ -75,7 +75,7 @@
+Description: Disabled assembler code.
+ Some fixes committed upstream since 2004. Next version (1.5.1) fixes new issues
+ so keep disabled for now.
+Forwarded: no
+Bug-Debian: http://bugs.debian.org/267986
+Last-Update: 2010-12-26
+--- a/source/SoundTouch/cpu_detect_x86_gcc.cpp
++++ b/source/SoundTouch/cpu_detect_x86_gcc.cpp
+@@ -68,7 +68,7 @@
  /// Checks which instruction set extensions are supported by the CPU.
  uint detectCPUextensions(void)
  {
--#ifndef __i386__
-+#if 1 // ndef __i386__
+-#if (!(ALLOW_X86_OPTIMIZATIONS) || !(__GNUC__))
++#if 1 // (!(ALLOW_X86_OPTIMIZATIONS) || !(__GNUC__))
+ 
      return 0; // always disable extensions on non-x86 platforms.
- #else
-     uint res = 0;
+ 
