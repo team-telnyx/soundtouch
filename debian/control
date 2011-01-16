@@ -1,12 +1,15 @@
 Source: soundtouch
 Priority: optional
 Section: libs
-Maintainer: Debian QA Group <packages@qa.debian.org>
+Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Uploaders: Alessio Treglia <alessio@debian.org>
 Build-Depends: debhelper (>= 8.0.0~),
                dh-autoreconf,
                g++-multilib [amd64]
 Standards-Version: 3.9.1
 Homepage: http://www.surina.net/soundtouch/
+Vcs-Git: git://git.debian.org/pkg-multimedia/soundtouch.git
+Vcs-Browser: http://git.debian.org/?p=pkg-multimedia/soundtouch.git
 
 Package: libsoundtouch0-dev
 Section: libdevel
