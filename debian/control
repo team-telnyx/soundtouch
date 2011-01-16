@@ -4,8 +4,8 @@ Section: libs
 Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
 Uploaders: Alessio Treglia <alessio@debian.org>
 Build-Depends: debhelper (>= 8.0.0~),
-               dh-autoreconf,
-               g++-multilib [amd64]
+ dh-autoreconf,
+ g++-multilib [amd64]
 Standards-Version: 3.9.1
 Homepage: http://www.surina.net/soundtouch/
 Vcs-Git: git://git.debian.org/pkg-multimedia/soundtouch.git
@@ -14,19 +14,21 @@ Vcs-Browser: http://git.debian.org/?p=pkg-multimedia/soundtouch.git
 Package: libsoundtouch0-dev
 Section: libdevel
 Architecture: any
-Depends: libsoundtouch0 (= ${binary:Version}), ${misc:Depends}
+Depends: libsoundtouch0 (= ${binary:Version}),
+ ${misc:Depends}
 Replaces: libsoundtouch1-dev
 Conflicts: libsoundtouch1-dev
 Description: Development files for sound stretching library
  SoundTouch is a library that can be used to change pitch and time of
  soundfiles independently.
  .
- This package contains the static library and headers used to build programs
- that use libsoundtouch0.
+ This package contains the static library and headers used to build
+ programs that use libsoundtouch0.
 
 Package: libsoundtouch0
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends},
+ ${misc:Depends}
 Replaces: libsoundtouch1c2
 Conflicts: libsoundtouch1c2
 Description: Sound stretching library
@@ -39,20 +41,20 @@ Package: lib32soundtouch0-dev
 Section: libdevel
 Architecture: amd64
 Depends: libsoundtouch0-dev (= ${binary:Version}),
-         lib32soundtouch0 (= ${binary:Version}),
-         ${misc:Depends}
+ lib32soundtouch0 (= ${binary:Version}),
+ ${misc:Depends}
 Description: Development files for sound stretching library (32 bit)
  SoundTouch is a library that can be used to change pitch and time of
  soundfiles independently.
  .
- This package contains the static library (32 bit) used to build programs that
- use libsoundtouch0.
+ This package contains the static library (32 bit) used to build
+ programs that use libsoundtouch0.
 
 Package: lib32soundtouch0
 Architecture: amd64
 Depends: libsoundtouch0 (= ${binary:Version}),
-         ${shlibs:Depends},
-         ${misc:Depends}
+ ${shlibs:Depends},
+ ${misc:Depends}
 Description: Sound stretching library (32 bit)
  SoundTouch is a library that can be used to change pitch and time
  of soundfiles independently.
@@ -68,5 +70,4 @@ Description: Stretches and pitch-shifts sound independently
  This is especially useful for musicians, who want to listen to a song
  played slowly, without having the pitch altered.
  .
- This program uses libsoundtouch for the actual work
-
+ This program uses libsoundtouch for the actual work.
