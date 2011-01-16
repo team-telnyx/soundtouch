@@ -1,31 +1,30 @@
-This package was debianized by:
+Format: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?op=file&rev=157
+Upstream-Name: SoundTouch
+Upstream-Contact: Olli Parviainen <oparviai@iki.fi>
+Source: http://www.surina.net/soundtouch/sourcecode.html
 
-    Guenter Geiger (Debian/GNU) <geiger@debian.org>  Tue, 10 Aug 2004 20:15:01 +0200
+Files: *
+Copyright: 2001-2010 Olli Parviainen <oparviai@iki.fi>
+License: LGPL-2.1+
 
-It was downloaded from:
-
-    http://www.surina.net/soundtouch/
-
-Upstream Author(s):
-
-    Olli Parviainen <oparviai@iki.fi>
-
+Files: debian/*
 Copyright:
+ 2011 Alessio Treglia <alessio@debian.org>
+ 2011 Miguel Colon <debian.micove@gmail.com>
+ 2004-2008 Guenter Geiger (Debian/GNU) <geiger@debian.org>
+License: LGPL-2.1+
 
-    Copyright (C) 2001-2010 Olli Parviainen
+License: LGPL-2.1+
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License version 2.1 as published by the Free Software Foundation.
 
-License: LGPL-2.1
-    This library is free software; you can redistribute it and/or
-    modify it under the terms of the GNU Lesser General Public
-    License version 2.1 as published by the Free Software Foundation.
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ Lesser General Public License for more details.
 
-    This library is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
-    Lesser General Public License for more details.
-
-    You should have received a copy of the GNU Lesser General Public
-    License along with this library. If not, see <http://www.gnu.org/licenses/>.
-
-On Debian systems, the complete text of the GNU Lesser General
-Public License can be found in "/usr/share/common-licenses/LGPL-2.1".
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library. If not, see <http://www.gnu.org/licenses/>.
+Comment: On Debian systems, the complete text of the GNU Lesser General
+ Public License can be found in "/usr/share/common-licenses/LGPL-2.1".
