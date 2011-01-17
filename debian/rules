@@ -29,6 +29,9 @@ override_dh_installchangelogs:
 
 override_dh_strip:
 	dh_strip --package=libsoundtouch0 --dbg-package=libsoundtouch0-dbg
+        ifeq ($(DEB_HOST_ARCH), amd64)
+		dh_strip --package=lib32soundtouch0 --dbg-package=lib32soundtouch0-dbg
+        endif
 
 %:
 	dh $@ --with autoreconf

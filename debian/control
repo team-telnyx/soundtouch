@@ -73,6 +73,18 @@ Description: Sound stretching library (32 bit)
  .
  This package contains the libsoundtouch0 shared library (32 bit).
 
+Package: lib32soundtouch0-dbg
+Priority: extra
+Section: debug
+Architecture: amd64
+Depends: lib32soundtouch0 (= ${binary:Version}),
+ ${misc:Depends}
+Description: Debugging symbols for the sound stretching library (32 bit)
+ SoundTouch is a library that can be used to change pitch and time of
+ soundfiles independently.
+ .
+ This package contains the debugging symbols (32 bit) for lib32soundtouch0.
+
 Package: soundstretch
 Section: sound
 Architecture: any
