@@ -18,12 +18,12 @@ Depends: libsoundtouch0 (= ${binary:Version}),
  ${misc:Depends}
 Replaces: libsoundtouch1-dev
 Conflicts: libsoundtouch1-dev
-Description: Development files for sound stretching library
+Description: Development files for the sound stretching library
  SoundTouch is a library that can be used to change pitch and time of
  soundfiles independently.
  .
- This package contains the static library and headers used to build
- programs that use libsoundtouch0.
+ This package contains the development files used to build programs that use
+ libsoundtouch0.
 
 Package: libsoundtouch0
 Architecture: any
@@ -43,12 +43,12 @@ Architecture: amd64
 Depends: libsoundtouch0-dev (= ${binary:Version}),
  lib32soundtouch0 (= ${binary:Version}),
  ${misc:Depends}
-Description: Development files for sound stretching library (32 bit)
+Description: Development files for the sound stretching library (32 bit)
  SoundTouch is a library that can be used to change pitch and time of
  soundfiles independently.
  .
- This package contains the static library (32 bit) used to build
- programs that use libsoundtouch0.
+ This package contains the development files (32 bit) used to build programs
+ that use lib32soundtouch0.
 
 Package: lib32soundtouch0
 Architecture: amd64
