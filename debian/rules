@@ -27,5 +27,8 @@ override_dh_installdocs:
 override_dh_installchangelogs:
 	dh_installchangelogs -plibsoundtouch0 -psoundstretch
 
+override_dh_strip:
+	dh_strip --package=libsoundtouch0 --dbg-package=libsoundtouch0-dbg
+
 %:
 	dh $@ --with autoreconf
