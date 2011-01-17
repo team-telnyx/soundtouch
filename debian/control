@@ -64,7 +64,8 @@ Description: Sound stretching library (32 bit)
 Package: soundstretch
 Section: sound
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends},
+ ${misc:Depends}
 Description: Stretches and pitch-shifts sound independently
  This program can strech and pitch-shift .wav-files independently. 
  This is especially useful for musicians, who want to listen to a song
