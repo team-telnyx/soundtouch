@@ -32,6 +32,7 @@ override_dh_strip:
         ifeq ($(DEB_HOST_ARCH), amd64)
 		dh_strip --package=lib32soundtouch0 --dbg-package=lib32soundtouch0-dbg
         endif
+	dh_strip --package=soundstretch --dbg-package=soundstretch-dbg
 
 %:
 	dh $@ --with autoreconf

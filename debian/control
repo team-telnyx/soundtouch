@@ -96,3 +96,16 @@ Description: Stretches and pitch-shifts sound independently
  played slowly, without having the pitch altered.
  .
  This program uses libsoundtouch for the actual work.
+
+Package: soundstretch-dbg
+Priority: extra
+Section: debug
+Architecture: any
+Depends: soundstretch (= ${binary:Version}),
+ ${misc:Depends}
+Description: Debugging symbols for the soundstretch program
+ This program can strech and pitch-shift .wav-files independently. 
+ This is especially useful for musicians, who want to listen to a song
+ played slowly, without having the pitch altered.
+ .
+ This package contains the debugging symbols for soundstretch.
