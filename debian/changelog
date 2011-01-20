@@ -1,3 +1,32 @@
+soundtouch (1.5.0-2) UNRELEASED; urgency=low
+
+  [ Alessio Treglia ]
+  * Add gbp config file
+  * Adopting this (Closes: #546981).
+  * A bit of style.
+  * Downgrade debhelper dependency, debhelper >= 7.0.50~ is enough.
+  * Update as per DEP-5 rev.157
+
+  [ Miguel Colon ]
+  * Update the description field of the development packages.
+  * One dependency per line for package soundstretch.
+  * Create the libsoundtouch0-dbg package.
+  * Create the lib32soundtouch0-dbg package.
+  * Create the soundstretch-dbg package.
+
+  [ Alessio Treglia ]
+  * libsoundtouch0-dev provides libsoundtouch-dev.
+  * Skip quilt patches
+  * lib32soundtouch0-dev provides lib32soundtouch-dev
+
+  [ Miguel Colon ]
+  * Change copyright year.
+
+  [ Alessio Treglia ]
+  * Update to rev162
+
+ -- Alessio Treglia <alessio@debian.org>  Thu, 20 Jan 2011 11:07:10 +0100
+
 soundtouch (1.5.0-1) experimental; urgency=low
 
   [ Alessio Treglia ]
