@@ -51,13 +51,13 @@ Description: Debugging symbols for the sound stretching library
  .
  This package contains the debugging symbols for libsoundtouch0.
 
-Package: lib32soundtouch0-dev
+Package: lib32soundtouch-dev
 Section: libdevel
 Architecture: amd64
 Depends: libsoundtouch0-dev (= ${binary:Version}),
  lib32soundtouch0 (= ${binary:Version}),
  ${misc:Depends}
-Provides: lib32soundtouch-dev
+Provides: lib32soundtouch0-dev
 Description: Development files for the sound stretching library (32 bit)
  SoundTouch is a library that can be used to change pitch and time of
  soundfiles independently.
