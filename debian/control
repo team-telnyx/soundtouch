@@ -54,7 +54,7 @@ Description: Debugging symbols for the sound stretching library
 Package: lib32soundtouch-dev
 Section: libdevel
 Architecture: amd64
-Depends: libsoundtouch0-dev (= ${binary:Version}),
+Depends: libsoundtouch-dev (= ${binary:Version}),
  lib32soundtouch0 (= ${binary:Version}),
  ${misc:Depends}
 Provides: lib32soundtouch0-dev
