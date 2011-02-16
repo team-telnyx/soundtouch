@@ -11,14 +11,14 @@ Homepage: http://www.surina.net/soundtouch/
 Vcs-Git: git://git.debian.org/pkg-multimedia/soundtouch.git
 Vcs-Browser: http://git.debian.org/?p=pkg-multimedia/soundtouch.git
 
-Package: libsoundtouch0-dev
+Package: libsoundtouch-dev
 Section: libdevel
 Architecture: any
 Depends: libsoundtouch0 (= ${binary:Version}),
  ${misc:Depends}
 Replaces: libsoundtouch1-dev
 Conflicts: libsoundtouch1-dev
-Provides: libsoundtouch-dev
+Provides: libsoundtouch0-dev
 Description: Development files for the sound stretching library
  SoundTouch is a library that can be used to change pitch and time of
  soundfiles independently.
