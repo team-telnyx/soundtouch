@@ -1,3 +1,22 @@
+soundtouch (1.5.0-3) unstable; urgency=low
+
+  [ Miguel Colon ]
+  * Override dh_prep only when it's actually needed.
+  * Fix FTBFS when using debhelper 7 and not building the lib32 packages.
+  * Add myself as uploader.
+  * Strip the SONAME out of the lib32 -DEV runtime's name.
+  * Rename libsoundtouch0-dev.install to libsoundtouch-dev.install.
+  * Rename and update libsoundtouch0-dev.links to libsoundtouch-dev.links.
+  * Rename lib32soundtouch0-dev.install to lib32soundtouch-dev.install.
+  * Rename and update lib32soundtouch0-dev.links to lib32soundtouch-dev.links.
+  * Update dependencies of lib32soundtouch-dev.
+
+  [ Alessio Treglia ]
+  * Upload to unstable.
+  * Strip the SONAME out of the -DEV runtime's name.
+
+ -- Alessio Treglia <alessio@debian.org>  Fri, 18 Feb 2011 00:44:05 +0100
+
 soundtouch (1.5.0-2) experimental; urgency=low
 
   [ Alessio Treglia ]
