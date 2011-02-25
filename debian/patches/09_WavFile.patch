@@ -1,0 +1,66 @@
+Description: SoundStretch assumes Wav files are 8bit or 16bit.
+ Current Else block assumes header.format.bits_per_sample == 16 is true. When a
+ 24/32bit Wav is used an assertion failure occurs.
+ .
+ Change the current Else to an ElseIf to satisfy the assumption and create an
+ Else that throws a runtime error message.
+ .
+ Adding a conditional statement to the WavInFile::init() function could be a
+ better solution. It would halt the program earlier and guarantee only
+ 8bit/16bit Wav are processed while possibly eliminating superfluous checks
+ of header.format.bits_per_sample.
+Bug-Ubuntu: https://launchpad.net/bugs/639927
+Forwarded: yes
+Author: Miguel Colon <debian.micove@gmail.com>
+Last-Update: 2011-02-24
+--- soundtouch-1.5.0.orig/source/SoundStretch/WavFile.cpp
++++ soundtouch-1.5.0/source/SoundStretch/WavFile.cpp
+@@ -278,10 +278,9 @@ int WavInFile::read(short *buffer, int m
+         }
+         delete[] temp;
+     }
+-    else
++    else if(header.format.bits_per_sample == 16)
+     {
+         // 16 bit format
+-        assert(header.format.bits_per_sample == 16);
+         assert(sizeof(short) == 2);
+ 
+         numBytes = maxElems * 2;
+@@ -300,6 +299,10 @@ int WavInFile::read(short *buffer, int m
+         // 16bit samples, swap byte order if necessary
+         _swap16Buffer((unsigned short *)buffer, numElems);
+     }
++    else
++    {
++        throw runtime_error("\nError: WavInFile::read(short*, int) works only with 8bit/16bit samples.");
++    }
+ 
+     return numElems;
+ }
+@@ -697,13 +700,11 @@ void WavOutFile::write(const short *buff
+         write(temp, numElems);
+         delete[] temp;
+     }
+-    else
++    else if(header.format.bits_per_sample == 16)
+     {
+         // 16bit format
+         unsigned short *pTemp = new unsigned short[numElems];
+ 
+-        assert(header.format.bits_per_sample == 16);
+-
+         // allocate temp buffer to swap byte order if necessary
+         memcpy(pTemp, buffer, numElems * 2);
+         _swap16Buffer(pTemp, numElems);
+@@ -718,6 +719,10 @@ void WavOutFile::write(const short *buff
+         }
+         bytesWritten += 2 * numElems;
+     }
++    else
++    {
++        throw runtime_error("\nError: WavInFile::read(short*, int) works only with 8bit/16bit samples.");
++    }
+ }
+ 
+ 
