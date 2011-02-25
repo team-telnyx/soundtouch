@@ -1,0 +1,191 @@
+libSoundTouch.so.0 libsoundtouch0 #MINVER#
+ (c++)"disableExtensions(unsigned int)@Base" 1.5.0
+ (c++)"detectCPUextensions()@Base" 1.5.0
+ (c++)"soundtouch::PeakFinder::detectPeak(float const*, int, int)@Base" 1.5.0
+ (c++)"soundtouch::PeakFinder::PeakFinder()@Base" 1.5.0
+ (c++)"soundtouch::PeakFinder::PeakFinder()@Base" 1.5.0
+ (c++)"soundtouch::SoundTouch::putSamples(float const*, unsigned int)@Base" 1.5.0
+ (c++)"soundtouch::SoundTouch::setSetting(int, int)@Base" 1.5.0
+ (c++)"soundtouch::SoundTouch::setChannels(unsigned int)@Base" 1.5.0
+ (c++)"soundtouch::SoundTouch::getVersionId()@Base" 1.5.0
+ (c++)"soundtouch::SoundTouch::setRateChange(float)@Base" 1.5.0
+ (c++)"soundtouch::SoundTouch::setSampleRate(unsigned int)@Base" 1.5.0
+ (c++)"soundtouch::SoundTouch::setTempoChange(float)@Base" 1.5.0
+ (c++)"soundtouch::SoundTouch::setPitchOctaves(float)@Base" 1.5.0
+ (c++)"soundtouch::SoundTouch::getVersionString()@Base" 1.5.0
+ (c++)"soundtouch::SoundTouch::setPitchSemiTones(float)@Base" 1.5.0
+ (c++)"soundtouch::SoundTouch::setPitchSemiTones(int)@Base" 1.5.0
+ (c++)"soundtouch::SoundTouch::calcEffectiveRateAndTempo()@Base" 1.5.0
+ (c++)"soundtouch::SoundTouch::clear()@Base" 1.5.0
+ (c++)"soundtouch::SoundTouch::flush()@Base" 1.5.0
+ (c++)"soundtouch::SoundTouch::setRate(float)@Base" 1.5.0
+ (c++)"soundtouch::SoundTouch::setPitch(float)@Base" 1.5.0
+ (c++)"soundtouch::SoundTouch::setTempo(float)@Base" 1.5.0
+ (c++)"soundtouch::SoundTouch::SoundTouch()@Base" 1.5.0
+ (c++)"soundtouch::SoundTouch::SoundTouch()@Base" 1.5.0
+ (c++)"soundtouch::SoundTouch::~SoundTouch()@Base" 1.5.0
+ (c++)"soundtouch::SoundTouch::~SoundTouch()@Base" 1.5.0
+ (c++)"soundtouch::SoundTouch::~SoundTouch()@Base" 1.5.0
+ (c++)"soundtouch::FIFOProcessor::receiveSamples(float*, unsigned int)@Base" 1.5.0
+ (c++)"soundtouch::FIFOProcessor::receiveSamples(unsigned int)@Base" 1.5.0
+ (c++)"soundtouch::FIFOProcessor::ptrBegin()@Base" 1.5.0
+ (c++)"soundtouch::FIFOProcessor::~FIFOProcessor()@Base" 1.5.0
+ (c++)"soundtouch::FIFOProcessor::~FIFOProcessor()@Base" 1.5.0
+ (c++)"soundtouch::FIFOSamplePipe::~FIFOSamplePipe()@Base" 1.5.0
+ (c++)"soundtouch::FIFOSamplePipe::~FIFOSamplePipe()@Base" 1.5.0
+ (c++)"soundtouch::RateTransposer::downsample(float const*, unsigned int)@Base" 1.5.0
+ (c++)"soundtouch::RateTransposer::putSamples(float const*, unsigned int)@Base" 1.5.0
+ (c++)"soundtouch::RateTransposer::getAAFilter()@Base" 1.5.0
+ (c++)"soundtouch::RateTransposer::newInstance()@Base" 1.5.0
+ (c++)"soundtouch::RateTransposer::setChannels(int)@Base" 1.5.0
+ (c++)"soundtouch::RateTransposer::enableAAFilter(int)@Base" 1.5.0
+ (c++)"soundtouch::RateTransposer::processSamples(float const*, unsigned int)@Base" 1.5.0
+ (c++)"soundtouch::RateTransposer::clear()@Base" 1.5.0
+ (c++)"soundtouch::RateTransposer::setRate(float)@Base" 1.5.0
+ (c++)"soundtouch::RateTransposer::upsample(float const*, unsigned int)@Base" 1.5.0
+ (c++)"soundtouch::RateTransposer::RateTransposer()@Base" 1.5.0
+ (c++)"soundtouch::RateTransposer::RateTransposer()@Base" 1.5.0
+ (c++)"soundtouch::RateTransposer::~RateTransposer()@Base" 1.5.0
+ (c++)"soundtouch::RateTransposer::~RateTransposer()@Base" 1.5.0
+ (c++)"soundtouch::RateTransposer::~RateTransposer()@Base" 1.5.0
+ (c++)"soundtouch::RateTransposer::operator new(unsigned long)@Base" 1.5.0
+ (c++)"soundtouch::FIFOSampleBuffer::putSamples(float const*, unsigned int)@Base" 1.5.0
+ (c++)"soundtouch::FIFOSampleBuffer::putSamples(unsigned int)@Base" 1.5.0
+ (c++)"soundtouch::FIFOSampleBuffer::setChannels(int)@Base" 1.5.0
+ (c++)"soundtouch::FIFOSampleBuffer::ensureCapacity(unsigned int)@Base" 1.5.0
+ (c++)"soundtouch::FIFOSampleBuffer::receiveSamples(float*, unsigned int)@Base" 1.5.0
+ (c++)"soundtouch::FIFOSampleBuffer::receiveSamples(unsigned int)@Base" 1.5.0
+ (c++)"soundtouch::FIFOSampleBuffer::clear()@Base" 1.5.0
+ (c++)"soundtouch::FIFOSampleBuffer::ptrEnd(unsigned int)@Base" 1.5.0
+ (c++)"soundtouch::FIFOSampleBuffer::rewind()@Base" 1.5.0
+ (c++)"soundtouch::FIFOSampleBuffer::ptrBegin()@Base" 1.5.0
+ (c++)"soundtouch::FIFOSampleBuffer::FIFOSampleBuffer(int)@Base" 1.5.0
+ (c++)"soundtouch::FIFOSampleBuffer::FIFOSampleBuffer(int)@Base" 1.5.0
+ (c++)"soundtouch::FIFOSampleBuffer::~FIFOSampleBuffer()@Base" 1.5.0
+ (c++)"soundtouch::FIFOSampleBuffer::~FIFOSampleBuffer()@Base" 1.5.0
+ (c++)"soundtouch::FIFOSampleBuffer::~FIFOSampleBuffer()@Base" 1.5.0
+ (c++)"soundtouch::AAFilter::setCutoffFreq(double)@Base" 1.5.0
+ (c++)"soundtouch::AAFilter::calculateCoeffs()@Base" 1.5.0
+ (c++)"soundtouch::AAFilter::setLength(unsigned int)@Base" 1.5.0
+ (c++)"soundtouch::AAFilter::AAFilter(unsigned int)@Base" 1.5.0
+ (c++)"soundtouch::AAFilter::AAFilter(unsigned int)@Base" 1.5.0
+ (c++)"soundtouch::AAFilter::~AAFilter()@Base" 1.5.0
+ (c++)"soundtouch::AAFilter::~AAFilter()@Base" 1.5.0
+ (c++)"soundtouch::BPMDetect::updateXCorr(int)@Base" 1.5.0
+ (c++)"soundtouch::BPMDetect::calcEnvelope(float*, int)@Base" 1.5.0
+ (c++)"soundtouch::BPMDetect::inputSamples(float const*, int)@Base" 1.5.0
+ (c++)"soundtouch::BPMDetect::getBpm()@Base" 1.5.0
+ (c++)"soundtouch::BPMDetect::decimate(float*, float const*, int)@Base" 1.5.0
+ (c++)"soundtouch::BPMDetect::BPMDetect(int, int)@Base" 1.5.0
+ (c++)"soundtouch::BPMDetect::BPMDetect(int, int)@Base" 1.5.0
+ (c++)"soundtouch::BPMDetect::~BPMDetect()@Base" 1.5.0
+ (c++)"soundtouch::BPMDetect::~BPMDetect()@Base" 1.5.0
+ (c++)"soundtouch::BPMDetect::~BPMDetect()@Base" 1.5.0
+ (c++)"soundtouch::FIRFilter::newInstance()@Base" 1.5.0
+ (c++)"soundtouch::FIRFilter::setCoefficients(float const*, unsigned int, unsigned int)@Base" 1.5.0
+ (c++)"soundtouch::FIRFilter::FIRFilter()@Base" 1.5.0
+ (c++)"soundtouch::FIRFilter::FIRFilter()@Base" 1.5.0
+ (c++)"soundtouch::FIRFilter::~FIRFilter()@Base" 1.5.0
+ (c++)"soundtouch::FIRFilter::~FIRFilter()@Base" 1.5.0
+ (c++)"soundtouch::FIRFilter::~FIRFilter()@Base" 1.5.0
+ (c++)"soundtouch::FIRFilter::operator new(unsigned long)@Base" 1.5.0
+ (c++)"soundtouch::TDStretch::clearInput()@Base" 1.5.0
+ (c++)"soundtouch::TDStretch::putSamples(float const*, unsigned int)@Base" 1.5.0
+ (c++)"soundtouch::TDStretch::newInstance()@Base" 1.5.0
+ (c++)"soundtouch::TDStretch::setChannels(int)@Base" 1.5.0
+ (c++)"soundtouch::TDStretch::setParameters(int, int, int, int)@Base" 1.5.0
+ (c++)"soundtouch::TDStretch::clearMidBuffer()@Base" 1.5.0
+ (c++)"soundtouch::TDStretch::processSamples()@Base" 1.5.0
+ (c++)"soundtouch::TDStretch::enableQuickSeek(int)@Base" 1.5.0
+ (c++)"soundtouch::TDStretch::calcSeqParameters()@Base" 1.5.0
+ (c++)"soundtouch::TDStretch::clearCrossCorrState()@Base" 1.5.0
+ (c++)"soundtouch::TDStretch::acceptNewOverlapLength(int)@Base" 1.5.0
+ (c++)"soundtouch::TDStretch::calculateOverlapLength(int)@Base" 1.5.0
+ (c++)"soundtouch::TDStretch::seekBestOverlapPosition(float const*)@Base" 1.5.0
+ (c++)"soundtouch::TDStretch::precalcCorrReferenceMono()@Base" 1.5.0
+ (c++)"soundtouch::TDStretch::precalcCorrReferenceStereo()@Base" 1.5.0
+ (c++)"soundtouch::TDStretch::seekBestOverlapPositionMono(float const*)@Base" 1.5.0
+ (c++)"soundtouch::TDStretch::seekBestOverlapPositionStereo(float const*)@Base" 1.5.0
+ (c++)"soundtouch::TDStretch::seekBestOverlapPositionMonoQuick(float const*)@Base" 1.5.0
+ (c++)"soundtouch::TDStretch::seekBestOverlapPositionStereoQuick(float const*)@Base" 1.5.0
+ (c++)"soundtouch::TDStretch::clear()@Base" 1.5.0
+ (c++)"soundtouch::TDStretch::setTempo(float)@Base" 1.5.0
+ (c++)"soundtouch::TDStretch::TDStretch()@Base" 1.5.0
+ (c++)"soundtouch::TDStretch::TDStretch()@Base" 1.5.0
+ (c++)"soundtouch::TDStretch::~TDStretch()@Base" 1.5.0
+ (c++)"soundtouch::TDStretch::~TDStretch()@Base" 1.5.0
+ (c++)"soundtouch::TDStretch::~TDStretch()@Base" 1.5.0
+ (c++)"soundtouch::TDStretch::operator new(unsigned long)@Base" 1.5.0
+ (c++)"RateTransposerFloat::transposeMono(float*, float const*, unsigned int)@Base" 1.5.0
+ (c++)"RateTransposerFloat::resetRegisters()@Base" 1.5.0
+ (c++)"RateTransposerFloat::transposeStereo(float*, float const*, unsigned int)@Base" 1.5.0
+ (c++)"RateTransposerFloat::RateTransposerFloat()@Base" 1.5.0
+ (c++)"RateTransposerFloat::RateTransposerFloat()@Base" 1.5.0
+ (c++)"RateTransposerFloat::~RateTransposerFloat()@Base" 1.5.0
+ (c++)"RateTransposerFloat::~RateTransposerFloat()@Base" 1.5.0
+ (c++)"RateTransposerFloat::~RateTransposerFloat()@Base" 1.5.0
+ (c++)"RateTransposerInteger::transposeMono(float*, float const*, unsigned int)@Base" 1.5.0
+ (c++)"RateTransposerInteger::resetRegisters()@Base" 1.5.0
+ (c++)"RateTransposerInteger::transposeStereo(float*, float const*, unsigned int)@Base" 1.5.0
+ (c++)"RateTransposerInteger::setRate(float)@Base" 1.5.0
+ (c++)"RateTransposerInteger::RateTransposerInteger()@Base" 1.5.0
+ (c++)"RateTransposerInteger::RateTransposerInteger()@Base" 1.5.0
+ (c++)"RateTransposerInteger::~RateTransposerInteger()@Base" 1.5.0
+ (c++)"RateTransposerInteger::~RateTransposerInteger()@Base" 1.5.0
+ (c++)"RateTransposerInteger::~RateTransposerInteger()@Base" 1.5.0
+ (c++)"soundtouch::PeakFinder::findGround(float const*, int, int) const@Base" 1.5.0
+ (c++)"soundtouch::PeakFinder::getPeakCenter(float const*, int) const@Base" 1.5.0
+ (c++)"soundtouch::PeakFinder::calcMassCenter(float const*, int, int) const@Base" 1.5.0
+ (c++)"soundtouch::PeakFinder::findCrossingLevel(float const*, float, int, int) const@Base" 1.5.0
+ (c++)"soundtouch::SoundTouch::getSetting(int) const@Base" 1.5.0
+ (c++)"soundtouch::SoundTouch::numUnprocessedSamples() const@Base" 1.5.0
+ (c++)"soundtouch::FIFOProcessor::numSamples() const@Base" 1.5.0
+ (c++)"soundtouch::FIFOProcessor::isEmpty() const@Base" 1.5.0
+ (c++)"soundtouch::RateTransposer::isAAFilterEnabled() const@Base" 1.5.0
+ (c++)"soundtouch::RateTransposer::isEmpty() const@Base" 1.5.0
+ (c++)"soundtouch::FIFOSampleBuffer::numSamples() const@Base" 1.5.0
+ (c++)"soundtouch::FIFOSampleBuffer::getCapacity() const@Base" 1.5.0
+ (c++)"soundtouch::FIFOSampleBuffer::isEmpty() const@Base" 1.5.0
+ (c++)"soundtouch::AAFilter::evaluate(float*, float const*, unsigned int, unsigned int) const@Base" 1.5.0
+ (c++)"soundtouch::AAFilter::getLength() const@Base" 1.5.0
+ (c++)"soundtouch::FIRFilter::evaluateFilterMono(float*, float const*, unsigned int) const@Base" 1.5.0
+ (c++)"soundtouch::FIRFilter::evaluateFilterStereo(float*, float const*, unsigned int) const@Base" 1.5.0
+ (c++)"soundtouch::FIRFilter::evaluate(float*, float const*, unsigned int, unsigned int) const@Base" 1.5.0
+ (c++)"soundtouch::FIRFilter::getLength() const@Base" 1.5.0
+ (c++)"soundtouch::TDStretch::overlapMono(float*, float const*) const@Base" 1.5.0
+ (c++)"soundtouch::TDStretch::getParameters(int*, int*, int*, int*) const@Base" 1.5.0
+ (c++)"soundtouch::TDStretch::overlapStereo(float*, float const*) const@Base" 1.5.0
+ (c++)"soundtouch::TDStretch::calcCrossCorrMono(float const*, float const*) const@Base" 1.5.0
+ (c++)"soundtouch::TDStretch::isQuickSeekEnabled() const@Base" 1.5.0
+ (c++)"soundtouch::TDStretch::calcCrossCorrStereo(float const*, float const*) const@Base" 1.5.0
+ (c++)"typeinfo for RateTransposerFloat@Base" 1.5.0
+ (c++)"typeinfo for RateTransposerInteger@Base" 1.5.0
+ (c++)"typeinfo for soundtouch::SoundTouch@Base" 1.5.0
+ (c++)"typeinfo for soundtouch::FIFOProcessor@Base" 1.5.0
+ (c++)"typeinfo for soundtouch::FIFOSamplePipe@Base" 1.5.0
+ (c++)"typeinfo for soundtouch::RateTransposer@Base" 1.5.0
+ (c++)"typeinfo for soundtouch::FIFOSampleBuffer@Base" 1.5.0
+ (c++)"typeinfo for soundtouch::BPMDetect@Base" 1.5.0
+ (c++)"typeinfo for soundtouch::FIRFilter@Base" 1.5.0
+ (c++)"typeinfo for soundtouch::TDStretch@Base" 1.5.0
+ (c++)"typeinfo name for RateTransposerFloat@Base" 1.5.0
+ (c++)"typeinfo name for RateTransposerInteger@Base" 1.5.0
+ (c++)"typeinfo name for soundtouch::SoundTouch@Base" 1.5.0
+ (c++)"typeinfo name for soundtouch::FIFOProcessor@Base" 1.5.0
+ (c++)"typeinfo name for soundtouch::FIFOSamplePipe@Base" 1.5.0
+ (c++)"typeinfo name for soundtouch::RateTransposer@Base" 1.5.0
+ (c++)"typeinfo name for soundtouch::FIFOSampleBuffer@Base" 1.5.0
+ (c++)"typeinfo name for soundtouch::BPMDetect@Base" 1.5.0
+ (c++)"typeinfo name for soundtouch::FIRFilter@Base" 1.5.0
+ (c++)"typeinfo name for soundtouch::TDStretch@Base" 1.5.0
+ (c++)"vtable for RateTransposerFloat@Base" 1.5.0
+ (c++)"vtable for RateTransposerInteger@Base" 1.5.0
+ (c++)"vtable for soundtouch::SoundTouch@Base" 1.5.0
+ (c++)"vtable for soundtouch::FIFOProcessor@Base" 1.5.0
+ (c++)"vtable for soundtouch::FIFOSamplePipe@Base" 1.5.0
+ (c++)"vtable for soundtouch::RateTransposer@Base" 1.5.0
+ (c++)"vtable for soundtouch::FIFOSampleBuffer@Base" 1.5.0
+ (c++)"vtable for soundtouch::BPMDetect@Base" 1.5.0
+ (c++)"vtable for soundtouch::FIRFilter@Base" 1.5.0
+ (c++)"vtable for soundtouch::TDStretch@Base" 1.5.0
+ soundtouch_ac_test@Base 1.5.0
