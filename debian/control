@@ -19,7 +19,8 @@ Depends: libsoundtouch0 (= ${binary:Version}),
  ${misc:Depends}
 Replaces: libsoundtouch1-dev
 Conflicts: libsoundtouch1-dev
-Provides: libsoundtouch0-dev
+Provides: libsoundtouch0-dev,
+ libsoundtouch1-dev
 Description: Development files for the sound stretching library
  SoundTouch is a library that can be used to change pitch and time of
  soundfiles independently.
