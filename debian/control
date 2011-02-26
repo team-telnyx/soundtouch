@@ -32,8 +32,6 @@ Package: libsoundtouch0
 Architecture: any
 Depends: ${shlibs:Depends},
  ${misc:Depends}
-Replaces: libsoundtouch1c2
-Conflicts: libsoundtouch1c2
 Description: Sound stretching library
  SoundTouch is a library that can be used to change pitch and time
  of soundfiles independently.
