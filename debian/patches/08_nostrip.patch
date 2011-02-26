@@ -1,81 +1,19 @@
-Description: Stop LD from stripping.
- If we use DEB_BUILD_OPTIONS=nostrip the final binaries are still stripped.
+Description: Do not strip the SoundStretch binary by default.
+ If we use DEB_BUILD_OPTIONS=nostrip the SoundStretch binary is still stripped.
+ .
  Correct this behavior by eliminating the -s flags.
-Forwarded: no
 Bug-Debian: http://bugs.debian.org/438038
-Last-Update: 2010-12-26
---- a/include/Makefile.in
-+++ b/include/Makefile.in
-@@ -347,7 +347,7 @@
- installcheck: installcheck-am
- install-strip:
- 	$(MAKE) $(AM_MAKEFLAGS) INSTALL_PROGRAM="$(INSTALL_STRIP_PROGRAM)" \
--	  install_sh_PROGRAM="$(INSTALL_STRIP_PROGRAM)" INSTALL_STRIP_FLAG=-s \
-+	  install_sh_PROGRAM="$(INSTALL_STRIP_PROGRAM)" INSTALL_STRIP_FLAG= \
- 	  `test -z '$(STRIP)' || \
- 	    echo "INSTALL_PROGRAM_ENV=STRIPPROG='$(STRIP)'"` install
- mostlyclean-generic:
---- a/Makefile.in
-+++ b/Makefile.in
-@@ -637,7 +637,7 @@
- installcheck: installcheck-recursive
- install-strip:
- 	$(MAKE) $(AM_MAKEFLAGS) INSTALL_PROGRAM="$(INSTALL_STRIP_PROGRAM)" \
--	  install_sh_PROGRAM="$(INSTALL_STRIP_PROGRAM)" INSTALL_STRIP_FLAG=-s \
-+	  install_sh_PROGRAM="$(INSTALL_STRIP_PROGRAM)" INSTALL_STRIP_FLAG= \
- 	  `test -z '$(STRIP)' || \
- 	    echo "INSTALL_PROGRAM_ENV=STRIPPROG='$(STRIP)'"` install
- mostlyclean-generic:
---- a/source/SoundStretch/Makefile.in
-+++ b/source/SoundStretch/Makefile.in
-@@ -203,7 +203,7 @@
- EXTRA_DIST = soundstretch.dsp soundstretch.dsw soundstretch.sln soundstretch.vcproj
- soundstretch_SOURCES = main.cpp RunParameters.cpp WavFile.cpp 
- soundstretch_LDADD = ../SoundTouch/libSoundTouch.la -lm
--soundstretch_LDFLAGS = -s
-+soundstretch_LDFLAGS =
- soundstretch_CXXFLAGS = -O3
- all: all-am
- 
-@@ -440,7 +440,7 @@
- installcheck: installcheck-am
- install-strip:
- 	$(MAKE) $(AM_MAKEFLAGS) INSTALL_PROGRAM="$(INSTALL_STRIP_PROGRAM)" \
--	  install_sh_PROGRAM="$(INSTALL_STRIP_PROGRAM)" INSTALL_STRIP_FLAG=-s \
-+	  install_sh_PROGRAM="$(INSTALL_STRIP_PROGRAM)" INSTALL_STRIP_FLAG= \
- 	  `test -z '$(STRIP)' || \
- 	    echo "INSTALL_PROGRAM_ENV=STRIPPROG='$(STRIP)'"` install
- mostlyclean-generic:
---- a/source/Makefile.in
-+++ b/source/Makefile.in
-@@ -409,7 +409,7 @@
- installcheck: installcheck-recursive
- install-strip:
- 	$(MAKE) $(AM_MAKEFLAGS) INSTALL_PROGRAM="$(INSTALL_STRIP_PROGRAM)" \
--	  install_sh_PROGRAM="$(INSTALL_STRIP_PROGRAM)" INSTALL_STRIP_FLAG=-s \
-+	  install_sh_PROGRAM="$(INSTALL_STRIP_PROGRAM)" INSTALL_STRIP_FLAG= \
- 	  `test -z '$(STRIP)' || \
- 	    echo "INSTALL_PROGRAM_ENV=STRIPPROG='$(STRIP)'"` install
- mostlyclean-generic:
---- a/source/SoundTouch/Makefile.in
-+++ b/source/SoundTouch/Makefile.in
-@@ -411,7 +411,7 @@
- installcheck: installcheck-am
- install-strip:
- 	$(MAKE) $(AM_MAKEFLAGS) INSTALL_PROGRAM="$(INSTALL_STRIP_PROGRAM)" \
--	  install_sh_PROGRAM="$(INSTALL_STRIP_PROGRAM)" INSTALL_STRIP_FLAG=-s \
-+	  install_sh_PROGRAM="$(INSTALL_STRIP_PROGRAM)" INSTALL_STRIP_FLAG= \
- 	  `test -z '$(STRIP)' || \
- 	    echo "INSTALL_PROGRAM_ENV=STRIPPROG='$(STRIP)'"` install
- mostlyclean-generic:
---- a/source/SoundStretch/Makefile.am
-+++ b/source/SoundStretch/Makefile.am
-@@ -44,7 +44,7 @@
+Forwarded: yes
+Author: Miguel Colon <debian.micove@gmail.com>
+Last-Update: 2011-02-25
+--- soundtouch-1.5.0.orig/source/SoundStretch/Makefile.am
++++ soundtouch-1.5.0/source/SoundStretch/Makefile.am
+@@ -44,7 +44,7 @@ soundstretch_SOURCES=main.cpp RunParamet
  soundstretch_LDADD=../SoundTouch/libSoundTouch.la -lm
  
  ## linker flags
 -soundstretch_LDFLAGS=-s
-+soundstretch_LDFLAGS=
++#soundstretch_LDFLAGS=-s
  
  ## additional compiler flags
  soundstretch_CXXFLAGS=-O3
