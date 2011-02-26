@@ -1,4 +1,4 @@
-soundtouch (1.5.0-4) UNRELEASED; urgency=low
+soundtouch (1.5.0-4) unstable; urgency=low
 
   [ Alessio Treglia ]
   * Deapply patch after git-buildpackage'ing, abort on upstream changes.
@@ -11,7 +11,7 @@ soundtouch (1.5.0-4) UNRELEASED; urgency=low
   * libsoundtouch-dev: needs to provide libsoundtouch1-dev (Closes: #615140)
   * Do not remove libsoundtouch1c2 if installed. (Closes: #615141, #615269)
 
- -- Miguel Colon <debian.micove@gmail.com>  Sat, 26 Feb 2011 16:49:06 -0500
+ -- Miguel Colon <debian.micove@gmail.com>  Sat, 26 Feb 2011 23:39:41 +0100
 
 soundtouch (1.5.0-3) unstable; urgency=low
 
