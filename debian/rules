@@ -5,8 +5,7 @@
 DEB_HOST_ARCH ?= $(shell dpkg-architecture -qDEB_HOST_ARCH)
 
 override_dh_clean:
-	dh_clean
-	rm -f soundtouch.pc
+	dh_clean soundtouch.pc
 
 override_dh_auto_configure:
         ifeq ($(DEB_HOST_ARCH), amd64)
