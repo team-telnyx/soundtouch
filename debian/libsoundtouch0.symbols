@@ -1,0 +1,4 @@
+libSoundTouch.so.0 libsoundtouch0 #MINVER#
+(arch=alpha ia64 amd64 kfreebsd-amd64 s390 sparc64)#include "libsoundtouch0.symbols.64bit"
+(arch=!alpha !ia64 !amd64 !kfreebsd-amd64 !s390 !sparc64)#include "libsoundtouch0.symbols.32bit"
+#include "libsoundtouch0.symbols.common"

@@ -1,0 +1,3 @@
+libSoundTouch.so.0 lib32soundtouch0 #MINVER#
+#include "libsoundtouch0.symbols.32bit"
+#include "libsoundtouch0.symbols.common"
