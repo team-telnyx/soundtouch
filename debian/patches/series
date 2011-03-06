@@ -1,5 +1,4 @@
 01_upstream_fixes.patch
 02_remove_sse.patch
-04_remove_asm.patch
 08_nostrip.patch
 09_WavFile.patch
