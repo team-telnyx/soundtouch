@@ -4,9 +4,6 @@
 #export DH_VERBOSE=1
 DEB_HOST_ARCH ?= $(shell dpkg-architecture -qDEB_HOST_ARCH)
 
-override_dh_clean:
-	dh_clean soundtouch.pc
-
 override_dh_auto_configure:
         ifeq ($(DEB_HOST_ARCH), amd64)
 		dh_auto_configure -- CC='gcc -m32' CXX='g++ -m32' \
