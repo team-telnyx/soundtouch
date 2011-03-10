@@ -1,8 +1,8 @@
 Description: Remove -msse2 build option for gcc.
  This flag is only available for amd64 and i386 archs.
-Forwarded: not-needed
+Forwarded: yes
 Bug-Debian: http://bugs.debian.org/479809
-Last-Update: 2010-12-26
+Last-Update: 2011-03-10
 --- a/source/SoundTouch/Makefile.am
 +++ b/source/SoundTouch/Makefile.am
 @@ -36,7 +36,7 @@
