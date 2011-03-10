@@ -4,12 +4,13 @@ soundtouch (1.5.0-5) unstable; urgency=low
   * Remove soundtouch.pc during the clean routine.
   * Remove 04_remove_asm.patch since 02_remove_sse.patch already does this.
   * Remove obsolete README.Debian file.
+  * Update and rename the files in debian/patches.
 
   [ Alessio Treglia ]
   * Put soundtouch.pc into debian/clean.
   * Update libsoundtouch0.docs, README.Debian has been deleted.
 
- -- Miguel Colon <debian.micove@gmail.com>  Thu, 10 Mar 2011 13:20:59 -0500
+ -- Miguel Colon <debian.micove@gmail.com>  Thu, 10 Mar 2011 14:49:09 -0500
 
 soundtouch (1.5.0-4) unstable; urgency=low
 
