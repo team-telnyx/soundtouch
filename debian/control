@@ -7,7 +7,7 @@ Uploaders: Alessio Treglia <alessio@debian.org>,
 Build-Depends: debhelper (>= 7.0.50~),
  dh-autoreconf,
  g++-multilib [amd64]
-Standards-Version: 3.9.1
+Standards-Version: 3.9.2
 Homepage: http://www.surina.net/soundtouch/
 Vcs-Git: git://git.debian.org/pkg-multimedia/soundtouch.git
 Vcs-Browser: http://git.debian.org/?p=pkg-multimedia/soundtouch.git
