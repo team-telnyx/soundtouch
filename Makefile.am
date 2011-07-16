@@ -1,6 +1,6 @@
 ## Process this file with automake to create Makefile.in
 ##
-## $Id: Makefile.am 38 2008-12-25 17:00:23Z oparviai $
+## $Id: Makefile.am 89 2010-04-03 15:30:08Z oparviai $
 ##
 ## Copyright (C) 2003 - David W. Durham
 ## 
@@ -52,7 +52,7 @@ EXTRA_DIST=                  \
        README.html
 
 pkgconfigdir = $(libdir)/pkgconfig
-pkgconfig_DATA = soundtouch-1.4.pc
+pkgconfig_DATA = soundtouch.pc
 
 ## This removes stuff from the distribution which may be present
 ## from a cvs checkout or other build reasons
