@@ -11,10 +11,10 @@
 ///
 ////////////////////////////////////////////////////////////////////////////////
 //
-// Last changed  : $Date: 2009-02-25 19:13:51 +0200 (Wed, 25 Feb 2009) $
+// Last changed  : $Date: 2011-07-16 15:27:51 +0300 (Sat, 16 Jul 2011) $
 // File revision : $Revision: 4 $
 //
-// $Id: cpu_detect_x86_gcc.cpp 67 2009-02-25 17:13:51Z oparviai $
+// $Id: cpu_detect_x86_gcc.cpp 123 2011-07-16 12:27:51Z oparviai $
 //
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -68,7 +68,7 @@ void disableExtensions(uint dwDisableMask)
 /// Checks which instruction set extensions are supported by the CPU.
 uint detectCPUextensions(void)
 {
-#if (!(ALLOW_X86_OPTIMIZATIONS) || !(__GNUC__))
+#if (!(SOUNDTOUCH_ALLOW_X86_OPTIMIZATIONS) || !(__GNUC__))
 
     return 0; // always disable extensions on non-x86 platforms.
 
@@ -78,8 +78,11 @@ uint detectCPUextensions(void)
     if (_dwDisabledISA == 0xffffffff) return 0;
 
     asm volatile(
+#ifndef __x86_64__
+        // Check if 'cpuid' instructions is available by toggling eflags bit 21.
+        // Skip this for x86-64 as they always have cpuid while stack manipulation
+        // differs from 16/32bit ISA.
         "\n\txor     %%esi, %%esi"       // clear %%esi = result register
-        // check if 'cpuid' instructions is available by toggling eflags bit 21
 
         "\n\tpushf"                      // save eflags to stack
         "\n\tmovl    (%%esp), %%eax"     // load eax from stack (with eflags)
@@ -93,6 +96,8 @@ uint detectCPUextensions(void)
         "\n\txor     %%edx, %%edx"       // clear edx for defaulting no mmx
         "\n\tcmp     %%ecx, %%eax"       // compare to original eflags values
         "\n\tjz      end"                // jumps to 'end' if cpuid not present
+#endif // __x86_64__
+
         // cpuid instruction available, test for presence of mmx instructions
 
         "\n\tmovl    $1, %%eax"
