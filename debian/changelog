@@ -1,3 +1,15 @@
+soundtouch (1.6.0-1) UNRELEASED; urgency=low
+
+  [ Alessio Treglia ]
+  * Bump Standards.
+
+  [ Miguel Colon ]
+  * Imported Upstream version 1.6.0
+  * Drop 00_upstream_fixes.patch - merged upstream.
+  * Refresh 01_remove_sse.patch.
+
+ -- Miguel Colon <debian.micove@gmail.com>  Sat, 16 Jul 2011 19:54:45 -0400
+
 soundtouch (1.5.0-5) unstable; urgency=low
 
   [ Miguel Colon ]
