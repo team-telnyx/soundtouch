@@ -23,9 +23,6 @@ override_dh_prep:
 	dh_prep --exclude=debian/tmp
 endif
 
-override_dh_install:
-	dh_install -s
-
 override_dh_installdocs:
 	dh_installdocs -plibsoundtouch0 -psoundstretch
 
@@ -38,12 +35,6 @@ override_dh_strip:
 		dh_strip --package=lib32soundtouch0 --dbg-package=lib32soundtouch0-dbg
         endif
 	dh_strip --package=soundstretch --dbg-package=soundstretch-dbg
-
-override_dh_gencontrol:
-	dh_gencontrol -s
-
-override_dh_builddeb:
-	dh_builddeb -s
 
 %:
 	dh $@ --with autoreconf
