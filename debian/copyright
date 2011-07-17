@@ -4,7 +4,7 @@ Upstream-Contact: Olli Parviainen <oparviai@iki.fi>
 Source: http://www.surina.net/soundtouch/sourcecode.html
 
 Files: *
-Copyright: 2001-2010 Olli Parviainen <oparviai@iki.fi>
+Copyright: 2001-2011 Olli Parviainen <oparviai@iki.fi>
 License: LGPL-2.1+
 
 Files: debian/*
