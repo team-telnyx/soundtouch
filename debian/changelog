@@ -5,10 +5,19 @@ soundtouch (1.6.0-1) UNRELEASED; urgency=low
 
   [ Miguel Colon ]
   * Imported Upstream version 1.6.0
-  * Drop 00_upstream_fixes.patch - merged upstream.
-  * Refresh 01_remove_sse.patch.
+  * Bump debhelper to version 8.
+  * debian/rules:
+    - Remove workaround that was needed when using debhelper 7.
+  * debian/patches:
+    - Drop 00_upstream_fixes.patch - merged upstream.
+    - Refresh 01_remove_sse.patch.
+    - Drop 03_WavFile.patch - fixed upstream.
+  * Remove debian/clean file.
+  * debian/copyright
+    - Update as per DEP-5 rev.174 (no changes needed).
+    - Update copyright years.
 
- -- Miguel Colon <debian.micove@gmail.com>  Sat, 16 Jul 2011 19:54:45 -0400
+ -- Miguel Colon <debian.micove@gmail.com>  Sat, 16 Jul 2011 21:07:52 -0400
 
 soundtouch (1.5.0-5) unstable; urgency=low
 
