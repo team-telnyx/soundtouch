@@ -16,8 +16,9 @@ soundtouch (1.6.0-1) UNRELEASED; urgency=low
   * debian/copyright
     - Update as per DEP-5 rev.174 (no changes needed).
     - Update copyright years.
+    - Update the URI of the format specification.
 
- -- Miguel Colon <debian.micove@gmail.com>  Sat, 16 Jul 2011 21:07:52 -0400
+ -- Miguel Colon <debian.micove@gmail.com>  Sat, 16 Jul 2011 21:36:02 -0400
 
 soundtouch (1.5.0-5) unstable; urgency=low
 
