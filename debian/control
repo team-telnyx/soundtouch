@@ -4,7 +4,7 @@ Section: libs
 Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
 Uploaders: Alessio Treglia <alessio@debian.org>,
  Miguel Colon <debian.micove@gmail.com>
-Build-Depends: debhelper (>= 7.0.50~),
+Build-Depends: debhelper (>= 8.0.0~),
  dh-autoreconf,
  g++-multilib [amd64]
 Standards-Version: 3.9.2
