@@ -2,26 +2,10 @@
 
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
-DEB_HOST_ARCH ?= $(shell dpkg-architecture -qDEB_HOST_ARCH)
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 
 override_dh_auto_configure:
-        ifeq ($(DEB_HOST_ARCH), amd64)
-		dh_auto_configure -- CC='gcc -m32' CXX='g++ -m32' \
-                                   --enable-shared=yes \
-                                   --bindir=\$${prefix}/bin32 \
-                                   --libexecdir=\$${prefix}/lib32/soundtouch \
-                                   --libdir=\$${prefix}/lib32
-		$(MAKE)
-		$(MAKE) install DESTDIR=$(CURDIR)/debian/tmp
-		$(MAKE) clean
-        endif
-
-	dh_auto_configure -- --enable-shared=yes
-
-ifeq ($(DEB_HOST_ARCH), amd64)
-override_dh_prep:
-	dh_prep --exclude=debian/tmp
-endif
+	dh_auto_configure -- --enable-shared=yes --libdir=/usr/lib/$(DEB_HOST_MULTIARCH)
 
 override_dh_installdocs:
 	dh_installdocs -plibsoundtouch0 -psoundstretch
@@ -31,9 +15,6 @@ override_dh_installchangelogs:
 
 override_dh_strip:
 	dh_strip --package=libsoundtouch0 --dbg-package=libsoundtouch0-dbg
-        ifeq ($(DEB_HOST_ARCH), amd64)
-		dh_strip --package=lib32soundtouch0 --dbg-package=lib32soundtouch0-dbg
-        endif
 	dh_strip --package=soundstretch --dbg-package=soundstretch-dbg
 
 %:
