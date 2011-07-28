@@ -18,4 +18,4 @@ override_dh_strip:
 	dh_strip --package=soundstretch --dbg-package=soundstretch-dbg
 
 %:
-	dh $@ --with autoreconf
+	dh $@ --parallel --with autoreconf
