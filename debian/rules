@@ -2,10 +2,9 @@
 
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
-DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 
 override_dh_auto_configure:
-	dh_auto_configure -- --enable-shared=yes --libdir=/usr/lib/$(DEB_HOST_MULTIARCH)
+	dh_auto_configure -- --enable-shared=yes
 
 override_dh_installdocs:
 	dh_installdocs -plibsoundtouch0 -psoundstretch
