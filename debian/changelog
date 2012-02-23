@@ -1,3 +1,14 @@
+soundtouch (1.6.0-3) UNRELEASED; urgency=low
+
+  * debian/copyright:
+    - Fix the syntax.
+    - Update copyright years.
+    - Update to finalized DEP-5 copyright-format 1.0.
+  * Bump Standards-Version to 3.9.3.
+  * Bump the debhelper version and compatibility level to 9.
+
+ -- Miguel Colon <debian.micove@gmail.com>  Thu, 23 Feb 2012 14:15:24 -0500
+
 soundtouch (1.6.0-2) unstable; urgency=low
 
   * Build for Multiarch. Drop lib32* (Closes: #635169).
