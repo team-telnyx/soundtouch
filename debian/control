@@ -14,6 +14,7 @@ Vcs-Browser: http://git.debian.org/?p=pkg-multimedia/soundtouch.git
 Package: libsoundtouch-dev
 Section: libdevel
 Architecture: any
+Multi-Arch: same
 Depends: libsoundtouch0 (= ${binary:Version}),
  ${misc:Depends}
 Replaces: libsoundtouch1-dev
