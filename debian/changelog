@@ -1,13 +1,18 @@
-soundtouch (1.6.0-3) UNRELEASED; urgency=low
+soundtouch (1.6.0-3) unstable; urgency=low
 
   * debian/copyright:
-    - Fix the syntax.
+    - Fix the syntax in the license paragraph.
     - Update copyright years.
     - Update to finalized DEP-5 copyright-format 1.0.
   * Bump Standards-Version to 3.9.3.
   * Bump the debhelper version and compatibility level to 9.
+    - Adds hardening support.
+    - Drops the need to explicitly use DEB_HOST_MULTIARCH in the rules file.
+  * Mark libsoundtouch-dev as Multi-Arch: same.
+  * Preserve -03 if noopt is not set.
+    - Adds a build dependency on dpkg-dev (>= 1.16.1.1~).
 
- -- Miguel Colon <debian.micove@gmail.com>  Thu, 23 Feb 2012 14:15:24 -0500
+ -- Miguel Colon <debian.micove@gmail.com>  Sun, 04 Mar 2012 17:13:16 -0500
 
 soundtouch (1.6.0-2) unstable; urgency=low
 
