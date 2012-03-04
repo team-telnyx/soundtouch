@@ -9,7 +9,7 @@ soundtouch (1.6.0-3) unstable; urgency=low
     - Adds hardening support.
     - Drops the need to explicitly use DEB_HOST_MULTIARCH in the rules file.
   * Mark libsoundtouch-dev as Multi-Arch: same.
-  * Preserve -03 if noopt is not set.
+  * Preserve -O3 if noopt is not set.
     - Adds a build dependency on dpkg-dev (>= 1.16.1.1~).
 
  -- Miguel Colon <debian.micove@gmail.com>  Sun, 04 Mar 2012 17:13:16 -0500
