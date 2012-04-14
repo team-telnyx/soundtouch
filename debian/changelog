@@ -1,3 +1,13 @@
+soundtouch (1.6.0-4) UNRELEASED; urgency=low
+
+  * debian/copyright
+    - Upstream confirmed the code is LGPL-2.1 and not LGPL-2.1+.
+    - Update the copyright years.
+    - Wrap the license paragraph to column 80.
+  * Update my entry in the uploaders list.
+
+ -- Miguel A. Colón Vélez <debian.micove@gmail.com>  Sat, 14 Apr 2012 02:04:29 -0400
+
 soundtouch (1.6.0-3) unstable; urgency=low
 
   * debian/copyright:
