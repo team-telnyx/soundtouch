@@ -1,7 +1,6 @@
 soundtouch (1.6.0-4) UNRELEASED; urgency=low
 
   * debian/copyright
-    - Upstream confirmed the code is LGPL-2.1 and not LGPL-2.1+.
     - Update the copyright years.
     - Wrap the license paragraph to column 80.
   * Update my entry in the uploaders list.
