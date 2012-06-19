@@ -5,19 +5,20 @@ Source: http://www.surina.net/soundtouch/sourcecode.html
 
 Files: *
 Copyright: 2001-2012 Olli Parviainen <oparviai@iki.fi>
-License: LGPL-2.1
+License: LGPL-2.1+
 
 Files: debian/*
 Copyright:
  2011 Alessio Treglia <alessio@debian.org>
  2010-2012 Miguel A. Colón Vélez <debian.micove@gmail.com>
  2004-2008 Guenter Geiger (Debian/GNU) <geiger@debian.org>
-License: LGPL-2.1
+License: LGPL-2.1+
 
-License: LGPL-2.1
+License: LGPL-2.1+
  This library is free software; you can redistribute it and/or modify it under
- the terms of the GNU Lesser General Public License version 2.1 as published by
- the Free Software Foundation.
+ the terms of the GNU Lesser General Public License as published by the Free
+ Software Foundation; either version 2.1 of the License, or (at your option) any
+ later version.
  .
  This library is distributed in the hope that it will be useful, but WITHOUT ANY
  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
