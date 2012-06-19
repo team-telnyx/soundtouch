@@ -2,9 +2,11 @@ Source: soundtouch
 Priority: optional
 Section: libs
 Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
-Uploaders: Alessio Treglia <alessio@debian.org>,
+Uploaders:
+ Alessio Treglia <alessio@debian.org>,
  Miguel A. Colón Vélez <debian.micove@gmail.com>
-Build-Depends: debhelper (>= 9),
+Build-Depends:
+ debhelper (>= 9),
  dh-autoreconf
 Standards-Version: 3.9.3
 Homepage: http://www.surina.net/soundtouch/
@@ -15,11 +17,15 @@ Package: libsoundtouch-dev
 Section: libdevel
 Architecture: any
 Multi-Arch: same
-Depends: libsoundtouch0 (= ${binary:Version}),
+Depends:
+ libsoundtouch0 (= ${binary:Version}),
  ${misc:Depends}
-Replaces: libsoundtouch1-dev
-Conflicts: libsoundtouch1-dev
-Provides: libsoundtouch0-dev,
+Replaces:
+ libsoundtouch1-dev
+Conflicts:
+ libsoundtouch1-dev
+Provides:
+ libsoundtouch0-dev,
  libsoundtouch1-dev
 Description: Development files for the sound stretching library
  SoundTouch is a library that can be used to change pitch and time of
@@ -32,8 +38,9 @@ Package: libsoundtouch0
 Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
-Depends: ${shlibs:Depends},
- ${misc:Depends}
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends}
 Description: Sound stretching library
  SoundTouch is a library that can be used to change pitch and time
  of soundfiles independently.
@@ -45,7 +52,8 @@ Priority: extra
 Section: debug
 Architecture: any
 Multi-Arch: same
-Depends: libsoundtouch0 (= ${binary:Version}),
+Depends:
+ libsoundtouch0 (= ${binary:Version}),
  ${misc:Depends}
 Description: Debugging symbols for the sound stretching library
  SoundTouch is a library that can be used to change pitch and time of
@@ -56,10 +64,11 @@ Description: Debugging symbols for the sound stretching library
 Package: soundstretch
 Section: sound
 Architecture: any
-Depends: ${shlibs:Depends},
- ${misc:Depends}
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends}
 Description: Stretches and pitch-shifts sound independently
- This program can strech and pitch-shift .wav-files independently. 
+ This program can strech and pitch-shift .wav-files independently.
  This is especially useful for musicians, who want to listen to a song
  played slowly, without having the pitch altered.
  .
@@ -69,10 +78,11 @@ Package: soundstretch-dbg
 Priority: extra
 Section: debug
 Architecture: any
-Depends: soundstretch (= ${binary:Version}),
+Depends:
+ soundstretch (= ${binary:Version}),
  ${misc:Depends}
 Description: Debugging symbols for the soundstretch program
- This program can strech and pitch-shift .wav-files independently. 
+ This program can strech and pitch-shift .wav-files independently.
  This is especially useful for musicians, who want to listen to a song
  played slowly, without having the pitch altered.
  .
