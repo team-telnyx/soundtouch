@@ -8,10 +8,10 @@
 ///
 ////////////////////////////////////////////////////////////////////////////////
 //
-// Last changed  : $Date: 2011-07-16 11:55:23 +0300 (Sat, 16 Jul 2011) $
+// Last changed  : $Date: 2012-04-04 22:47:28 +0300 (Wed, 04 Apr 2012) $
 // File revision : $Revision: 4 $
 //
-// $Id: main.cpp 121 2011-07-16 08:55:23Z oparviai $
+// $Id: main.cpp 141 2012-04-04 19:47:28Z oparviai $
 //
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -39,6 +39,7 @@
 #include <stdexcept>
 #include <stdio.h>
 #include <string.h>
+#include <time.h>
 #include "RunParameters.h"
 #include "WavFile.h"
 #include "SoundTouch.h"
@@ -50,7 +51,7 @@ using namespace std;
 // Processing chunk size
 #define BUFF_SIZE           2048
 
-#if WIN32
+#if _WIN32
     #include <io.h>
     #include <fcntl.h>
 
@@ -64,7 +65,7 @@ using namespace std;
 
 static const char _helloText[] = 
     "\n"
-    "   SoundStretch v%s -  Written by Olli Parviainen 2001 - 2011\n"
+    "   SoundStretch v%s -  Written by Olli Parviainen 2001 - 2012\n"
     "==================================================================\n"
     "author e-mail: <oparviai"
     "@"
@@ -169,7 +170,6 @@ static void setup(SoundTouch *pSoundTouch, const WavInFile *inFile, const RunPar
 
     fflush(stderr);
 }
-
 
 
 
@@ -309,8 +309,11 @@ int main(const int nParams, const char * const paramStr[])
         // Setup the 'SoundTouch' object for processing the sound
         setup(&soundTouch, inFile, params);
 
+        // clock_t cs = clock();    // for benchmarking processing duration
         // Process the sound
         process(&soundTouch, inFile, outFile);
+        // clock_t ce = clock();    // for benchmarking processing duration
+        // printf("duration: %lf\n", (double)(ce-cs)/CLOCKS_PER_SEC);
 
         // Close WAV file handles & dispose of the objects
         delete inFile;

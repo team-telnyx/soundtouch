@@ -8,10 +8,10 @@
 ///
 ////////////////////////////////////////////////////////////////////////////////
 //
-// Last changed  : $Date: 2009-05-17 19:48:30 +0300 (Sun, 17 May 2009) $
+// Last changed  : $Date: 2011-09-02 21:56:11 +0300 (Fri, 02 Sep 2011) $
 // File revision : $Revision: 4 $
 //
-// $Id: RunParameters.cpp 72 2009-05-17 16:48:30Z oparviai $
+// $Id: RunParameters.cpp 131 2011-09-02 18:56:11Z oparviai $
 //
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -36,7 +36,6 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-#include <stdexcept>
 #include <string>
 #include <stdlib.h>
 
@@ -120,7 +119,7 @@ RunParameters::RunParameters(const int nParams, const char * const paramStr[])
         }
         string msg = whatText;
         msg += usage;
-        throw runtime_error(msg.c_str());
+        ST_THROW_RT_ERROR(msg.c_str());
     }
 
     inFileName = NULL;
@@ -200,14 +199,14 @@ void RunParameters::throwIllegalParamExp(const string &str) const
     msg += str;
     msg += "\".\n\n";
     msg += usage;
-    throw runtime_error(msg.c_str());
+    ST_THROW_RT_ERROR(msg.c_str());
 }
 
 
 
 void RunParameters::throwLicense() const
 {
-    throw runtime_error(licenseText);
+    ST_THROW_RT_ERROR(licenseText);
 }
 
 

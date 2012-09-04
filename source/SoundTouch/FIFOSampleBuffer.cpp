@@ -15,10 +15,10 @@
 ///
 ////////////////////////////////////////////////////////////////////////////////
 //
-// Last changed  : $Date: 2009-02-27 19:24:42 +0200 (Fri, 27 Feb 2009) $
+// Last changed  : $Date: 2012-06-13 22:29:53 +0300 (Wed, 13 Jun 2012) $
 // File revision : $Revision: 4 $
 //
-// $Id: FIFOSampleBuffer.cpp 68 2009-02-27 17:24:42Z oparviai $
+// $Id: FIFOSampleBuffer.cpp 143 2012-06-13 19:29:53Z oparviai $
 //
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -47,7 +47,6 @@
 #include <memory.h>
 #include <string.h>
 #include <assert.h>
-#include <stdexcept>
 
 #include "FIFOSampleBuffer.h"
 
@@ -175,7 +174,7 @@ void FIFOSampleBuffer::ensureCapacity(uint capacityRequirement)
         tempUnaligned = new SAMPLETYPE[sizeInBytes / sizeof(SAMPLETYPE) + 16 / sizeof(SAMPLETYPE)];
         if (tempUnaligned == NULL)
         {
-            throw std::runtime_error("Couldn't allocate memory!\n");
+            ST_THROW_RT_ERROR("Couldn't allocate memory!\n");
         }
         // Align the buffer to begin at 16byte cache line boundary for optimal performance
         temp = (SAMPLETYPE *)(((ulong)tempUnaligned + 15) & (ulong)-16);
@@ -260,3 +259,16 @@ void FIFOSampleBuffer::clear()
     samplesInBuffer = 0;
     bufferPos = 0;
 }
+
+
+/// allow trimming (downwards) amount of samples in pipeline.
+/// Returns adjusted amount of samples
+uint FIFOSampleBuffer::adjustAmountOfSamples(uint numSamples)
+{
+    if (numSamples < samplesInBuffer)
+    {
+        samplesInBuffer = numSamples;
+    }
+    return samplesInBuffer;
+}
+

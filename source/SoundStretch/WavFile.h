@@ -16,10 +16,10 @@
 ///
 ////////////////////////////////////////////////////////////////////////////////
 //
-// Last changed  : $Date: 2009-02-21 18:00:14 +0200 (Sat, 21 Feb 2009) $
+// Last changed  : $Date: 2012-09-01 10:57:22 +0300 (Sat, 01 Sep 2012) $
 // File revision : $Revision: 4 $
 //
-// $Id: WavFile.h 63 2009-02-21 16:00:14Z oparviai $
+// $Id: WavFile.h 153 2012-09-01 07:57:22Z oparviai $
 //
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -92,15 +92,35 @@ typedef struct
 } WavHeader;
 
 
+/// Base class for processing WAV audio files.
+class WavFileBase
+{
+private:
+    /// Conversion working buffer;
+    char *convBuff;
+    int convBuffSize;
+
+protected:
+    WavFileBase();
+    virtual ~WavFileBase();
+
+    /// Get pointer to conversion buffer of at min. given size
+    void *getConvBuffer(int sizeByte);
+};
+
+
 /// Class for reading WAV audio files.
-class WavInFile
+class WavInFile : protected WavFileBase
 {
 private:
     /// File pointer.
     FILE *fptr;
 
+    /// Position within the audio stream
+    long position;
+
     /// Counter of how many bytes of sample data have been read from the file.
-    uint dataRead;
+    long dataRead;
 
     /// WAV header information
     WavHeader header;
@@ -158,12 +178,17 @@ public:
     /// Get the audio file length in milliseconds
     uint getLengthMS() const;
 
+    /// Returns how many milliseconds of audio have so far been read from the file
+    ///
+    /// \return elapsed duration in milliseconds
+    uint getElapsedMS() const;
+
     /// Reads audio samples from the WAV file. This routine works only for 8 bit samples.
     /// Reads given number of elements from the file or if end-of-file reached, as many 
     /// elements as are left in the file.
     ///
     /// \return Number of 8-bit integers read from the file.
-    int read(char *buffer, int maxElems);
+    int read(unsigned char *buffer, int maxElems);
 
     /// Reads audio samples from the WAV file to 16 bit integer format. Reads given number 
     /// of elements from the file or if end-of-file reached, as many elements as are 
@@ -177,6 +202,7 @@ public:
     /// Reads audio samples from the WAV file to floating point format, converting 
     /// sample values to range [-1,1[. Reads given number of elements from the file
     /// or if end-of-file reached, as many elements as are left in the file.
+    /// Notice that reading in float format supports 8/16/24/32bit sample formats.
     ///
     /// \return Number of elements read from the file.
     int read(float *buffer,     ///< Pointer to buffer where to read data.
@@ -192,7 +218,7 @@ public:
 
 
 /// Class for writing WAV audio files.
-class WavOutFile
+class WavOutFile : protected WavFileBase
 {
 private:
     /// Pointer to the WAV file
@@ -230,8 +256,8 @@ public:
 
     /// Write data to WAV file. This function works only with 8bit samples. 
     /// Throws a 'runtime_error' exception if writing to file fails.
-    void write(const char *buffer,     ///< Pointer to sample data buffer.
-               int numElems             ///< How many array items are to be written to file.
+    void write(const unsigned char *buffer, ///< Pointer to sample data buffer.
+               int numElems                 ///< How many array items are to be written to file.
                );
 
     /// Write data to WAV file. Throws a 'runtime_error' exception if writing to

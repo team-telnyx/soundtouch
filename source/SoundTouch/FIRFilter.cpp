@@ -11,10 +11,10 @@
 ///
 ////////////////////////////////////////////////////////////////////////////////
 //
-// Last changed  : $Date: 2011-02-13 21:13:57 +0200 (Sun, 13 Feb 2011) $
+// Last changed  : $Date: 2011-09-02 21:56:11 +0300 (Fri, 02 Sep 2011) $
 // File revision : $Revision: 4 $
 //
-// $Id: FIRFilter.cpp 104 2011-02-13 19:13:57Z oparviai $
+// $Id: FIRFilter.cpp 131 2011-09-02 18:56:11Z oparviai $
 //
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -43,7 +43,6 @@
 #include <assert.h>
 #include <math.h>
 #include <stdlib.h>
-#include <stdexcept>
 #include "FIRFilter.h"
 #include "cpu_detect.h"
 
@@ -174,7 +173,7 @@ uint FIRFilter::evaluateFilterMono(SAMPLETYPE *dest, const SAMPLETYPE *src, uint
 void FIRFilter::setCoefficients(const SAMPLETYPE *coeffs, uint newLength, uint uResultDivFactor)
 {
     assert(newLength > 0);
-    if (newLength % 8) throw std::runtime_error("FIR filter length not divisible by 8");
+    if (newLength % 8) ST_THROW_RT_ERROR("FIR filter length not divisible by 8");
 
     lengthDiv8 = newLength / 8;
     length = lengthDiv8 * 8;
@@ -222,8 +221,8 @@ uint FIRFilter::evaluate(SAMPLETYPE *dest, const SAMPLETYPE *src, uint numSample
 void * FIRFilter::operator new(size_t s)
 {
     // Notice! don't use "new FIRFilter" directly, use "newInstance" to create a new instance instead!
-    throw std::runtime_error("Error in FIRFilter::new: Don't use 'new FIRFilter', use 'newInstance' member instead!");
-    return NULL;
+    ST_THROW_RT_ERROR("Error in FIRFilter::new: Don't use 'new FIRFilter', use 'newInstance' member instead!");
+    return newInstance();
 }
 
 
