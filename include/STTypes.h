@@ -8,10 +8,10 @@
 ///
 ////////////////////////////////////////////////////////////////////////////////
 //
-// Last changed  : $Date: 2011-07-16 11:45:37 +0300 (Sat, 16 Jul 2011) $
+// Last changed  : $Date: 2012-04-01 20:01:42 +0300 (Sun, 01 Apr 2012) $
 // File revision : $Revision: 3 $
 //
-// $Id: STTypes.h 119 2011-07-16 08:45:37Z oparviai $
+// $Id: STTypes.h 136 2012-04-01 17:01:42Z oparviai $
 //
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -86,7 +86,7 @@ namespace soundtouch
      
     #endif
 
-    #if (WIN32 || __i386__ || __x86_64__)
+    #if (_M_IX86 || __i386__ || __x86_64__ || _M_X64)
         /// Define this to allow X86-specific assembler/intrinsic optimizations. 
         /// Notice that library contains also usual C++ versions of each of these
         /// these routines, so if you're having difficulties getting the optimized 
@@ -94,6 +94,17 @@ namespace soundtouch
         /// to make the library compile.
 
         #define SOUNDTOUCH_ALLOW_X86_OPTIMIZATIONS     1
+
+        /// In GNU environment, allow the user to override this setting by
+        /// giving the following switch to the configure script:
+        /// ./configure --disable-x86-optimizations
+        /// ./configure --enable-x86-optimizations=no
+        #ifdef SOUNDTOUCH_DISABLE_X86_OPTIMIZATIONS
+            #undef SOUNDTOUCH_ALLOW_X86_OPTIMIZATIONS
+        #endif
+    #else
+        /// Always disable optimizations when not using a x86 systems.
+        #undef SOUNDTOUCH_ALLOW_X86_OPTIMIZATIONS
 
     #endif
 
@@ -132,8 +143,20 @@ namespace soundtouch
         #endif
 
     #endif  // SOUNDTOUCH_INTEGER_SAMPLES
+
 };
 
+// define ST_NO_EXCEPTION_HANDLING switch to disable throwing std exceptions:
+// #define ST_NO_EXCEPTION_HANDLING    1
+#ifdef ST_NO_EXCEPTION_HANDLING
+    // Exceptions disabled. Throw asserts instead if enabled.
+    #include <assert.h>
+    #define ST_THROW_RT_ERROR(x)    {assert((const char *)x);}
+#else
+    // use c++ standard exceptions
+    #include <stdexcept>
+    #define ST_THROW_RT_ERROR(x)    {throw std::runtime_error(x);}
+#endif
 
 // When this #define is active, eliminates a clicking sound when the "rate" or "pitch" 
 // parameter setting crosses from value <1 to >=1 or vice versa during processing. 
