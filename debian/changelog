@@ -9,6 +9,8 @@ soundtouch (1.7.0-1) experimental; urgency=low
   [ Alessio Treglia ]
   * New upstream release.
   * Update debian/copyright.
+  * Refresh patches.
+  * Remove 02_nostrip.patch, no longer needed.
 
  -- Alessio Treglia <alessio@debian.org>  Tue, 04 Sep 2012 18:26:44 +0200
 
