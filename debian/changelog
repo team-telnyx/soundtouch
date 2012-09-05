@@ -1,3 +1,10 @@
+soundtouch (1.7.0-2) experimental; urgency=low
+
+  * Remove 01_remove_sse.patch, no longer needed.
+  * Simplify the rules file. The shared library is now built by default.
+
+ -- Miguel A. Colón Vélez <debian.micove@gmail.com>  Wed, 05 Sep 2012 02:29:37 -0400
+
 soundtouch (1.7.0-1) experimental; urgency=low
 
   [ Miguel A. Colón Vélez ]
