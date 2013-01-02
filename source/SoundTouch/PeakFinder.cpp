@@ -11,10 +11,10 @@
 ///
 ////////////////////////////////////////////////////////////////////////////////
 //
-// Last changed  : $Date: 2012-09-01 10:43:51 +0300 (Sat, 01 Sep 2012) $
+// Last changed  : $Date: 2012-12-28 21:52:47 +0200 (Fri, 28 Dec 2012) $
 // File revision : $Revision: 4 $
 //
-// $Id: PeakFinder.cpp 152 2012-09-01 07:43:51Z oparviai $
+// $Id: PeakFinder.cpp 164 2012-12-28 19:52:47Z oparviai $
 //
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -238,8 +238,6 @@ double PeakFinder::detectPeak(const float *data, int aminPos, int amaxPos)
     // Now check if the highest peak were in fact harmonic of the true base beat peak 
     // - sometimes the highest peak can be Nth harmonic of the true base peak yet 
     // just a slightly higher than the true base
-
-    int hp = (int)(highPeak + 0.5);
 
     for (i = 3; i < 10; i ++)
     {
