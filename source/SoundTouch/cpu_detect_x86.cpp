@@ -11,10 +11,10 @@
 ///
 ////////////////////////////////////////////////////////////////////////////////
 //
-// Last changed  : $Date: 2012-04-01 23:00:09 +0300 (Sun, 01 Apr 2012) $
+// Last changed  : $Date: 2012-11-08 20:44:37 +0200 (Thu, 08 Nov 2012) $
 // File revision : $Revision: 4 $
 //
-// $Id: cpu_detect_x86.cpp 138 2012-04-01 20:00:09Z oparviai $
+// $Id: cpu_detect_x86.cpp 159 2012-11-08 18:44:37Z oparviai $
 //
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -47,14 +47,12 @@
     #if defined(__GNUC__) && defined(__i386__)
         // gcc
         #include "cpuid.h"
-    #endif
-
-    #if defined(_M_IX86)
-        // windows
+    #elif defined(_M_IX86)
+        // windows non-gcc
         #include <intrin.h>
-        #define bit_MMX		(1 << 23)
-        #define bit_SSE		(1 << 25)
-        #define bit_SSE2	(1 << 26)
+        #define bit_MMX     (1 << 23)
+        #define bit_SSE     (1 << 25)
+        #define bit_SSE2    (1 << 26)
     #endif
 
 #endif

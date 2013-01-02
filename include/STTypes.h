@@ -8,10 +8,10 @@
 ///
 ////////////////////////////////////////////////////////////////////////////////
 //
-// Last changed  : $Date: 2012-04-01 20:01:42 +0300 (Sun, 01 Apr 2012) $
+// Last changed  : $Date: 2012-12-28 16:53:56 +0200 (Fri, 28 Dec 2012) $
 // File revision : $Revision: 3 $
 //
-// $Id: STTypes.h 136 2012-04-01 17:01:42Z oparviai $
+// $Id: STTypes.h 162 2012-12-28 14:53:56Z oparviai $
 //
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -42,8 +42,21 @@
 typedef unsigned int    uint;
 typedef unsigned long   ulong;
 
-#ifdef __GNUC__
-    // In GCC, include soundtouch_config.h made by config scritps
+// Patch for MinGW: on Win64 long is 32-bit
+#ifdef _WIN64
+    typedef unsigned long long ulongptr;
+#else
+    typedef ulong ulongptr;
+#endif
+
+
+// Helper macro for aligning pointer up to next 16-byte boundary
+#define SOUNDTOUCH_ALIGN_POINTER_16(x)      ( ( (ulongptr)(x) + 15 ) & ~(ulongptr)15 )
+
+
+#if (defined(__GNUC__) && !defined(ANDROID))
+    // In GCC, include soundtouch_config.h made by config scritps.
+    // Skip this in Android compilation that uses GCC but without configure scripts.
     #include "soundtouch_config.h"
 #endif
 
@@ -64,6 +77,13 @@ namespace soundtouch
     /// setting inherited from some other header file:
     //#undef SOUNDTOUCH_INTEGER_SAMPLES
     //#undef SOUNDTOUCH_FLOAT_SAMPLES
+
+    #if (defined(__SOFTFP__))
+        // For Android compilation: Force use of Integer samples in case that
+        // compilation uses soft-floating point emulation - soft-fp is way too slow
+        #undef  SOUNDTOUCH_FLOAT_SAMPLES
+        #define SOUNDTOUCH_INTEGER_SAMPLES      1
+    #endif
 
     #if !(SOUNDTOUCH_INTEGER_SAMPLES || SOUNDTOUCH_FLOAT_SAMPLES)
        

@@ -15,7 +15,7 @@
 </head>
 <body class="normal">
 <hr>
-<h1>SoundTouch audio processing library v1.7.0</h1>
+<h1>SoundTouch audio processing library v1.7.1</h1>
 <p class="normal">SoundTouch library Copyright © Olli Parviainen 2001-2012 </p>
 <hr>
 <h2>1. Introduction </h2>
@@ -133,9 +133,24 @@ directly and remove the following definition:<blockquote>
   <pre>#define SOUNDTOUCH_ALLOW_X86_OPTIMIZATIONS 1</pre>
 </blockquote>
 
+<h4><b>2.2.3 Compiling Shared Library / DLL version</b></h4>
+    <p>
+        The GNU compilation does not automatically create a shared-library version of 
+        SoundTouch (.so or .dll). If such is desired, then you can create it as follows 
+        after running the usual compilation:</p>
+    <blockquote>
+  <pre>g++ -shared -static -DDLL_EXPORTS -I../../include -o SoundTouch.dll \
+     SoundTouchDLL.cpp ../SoundTouch/.libs/libSoundTouch.a
+sstrip SoundTouch.dll</pre>
+</blockquote>
+
+<h3>2.1. Building in Android</h3>
+<p>Android compilation instructions are within the 
+    source code package, see file &quot;<b>source/Android-lib/README-SoundTouch-Android.html</b>&quot; 
+    in the package.</p>
+
 <hr>
-<h2>3. About implementation &amp; Usage tips</h2>
-<h3>3.1. Supported sample data formats</h3>
+<h2>3. About implementation &amp; Usage tips <h3>3.1. Supported sample data formats</h3>
 <p>The sample data format can be chosen between 16bit signed integer
 and 32bit floating point values, the default is 32bit floating point. </p>
 <p> In Windows environment, the sample data format is chosen in file
@@ -498,9 +513,13 @@ and estimates the BPM rate:</p>
 <hr>
 <h2>5. Change History</h2>
 <h3>5.1. SoundTouch library Change History </h3>
+<p><b>1.7.1:</b></p>
+<ul>
+    <li>Added files for Android compilation
+</ul>
 <p><b>1.7.0:</b></p>
 <ul>
-    <li>Sound quality improvements</li>
+    <li>Sound quality improvements/li>
     <li>Improved flush() to adjust output sound stream duration to match better with 
         ideal duration</li>
     <li>Rewrote x86 cpu feature check to resolve compatibility problems</li>
@@ -701,25 +720,39 @@ switch "-bpm" </li>
 <p>Kudos for these people who have contributed to development or
 submitted bugfixes since SoundTouch v1.3.1: </p>
 <ul>
-  <li> Arthur A </li>
-  <li> Richard Ash </li>
-  <li> Stanislav Brabec </li>
-  <li> Christian Budde </li>
-  <li> Brian Cameron </li>
-  <li> Jason Champion </li>
+  <li> Arthur A</li>
+  <li> Richard Ash</li>
+  <li> Stanislav Brabec</li>
+  <li> Christian Budde</li>
+  <li> Jacek Caban</li>
+  <li> Brian Cameron</li>
+  <li> Jason Champion</li>
   <li> David Clark</li>
+  <li> Patrick Colis</li>
+  <li> Miquel Colon</li>
+  <li> Justin Frankel</li>
+  <li> Jason Garland</li>
+  <li> Takashi Iwai</li>
+  <li> Yuval Naveh</li>
+  <li> Paulo Pizarro</li>
+  <li> Blaise Potard</li>
+  <li> RJ Ryan</li>
   <li> Patrick Colis </li>
   <li> Miquel Colon </li>
+  <li> Sandro Cumerlato</li>
   <li> Justin Frankel </li>
   <li> Jason Garland </li>
   <li> Takashi Iwai </li>
+  <li> Mathias Möhl</li>
   <li> Yuval Naveh </li>
   <li> Paulo Pizarro </li>
-    <li> Blaise Potard</li>
+  <li> Blaise Potard</li>
   <li> RJ Ryan </li>
   <li> John Sheehy</li>
-    <li> Tim Shuttleworth</li>
-    <li> Katja Vetter</li>
+  <li> Tim Shuttleworth</li>
+  <li> John Stumpo</li>
+  <li> Tim Shuttleworth</li>
+  <li> Katja Vetter</li>
 </ul>
 <p>Moral greetings to all other contributors and users also!</p>
 <hr>
@@ -736,8 +769,9 @@ General Public License for more details.</p>
 <p>You should have received a copy of the GNU Lesser General Public
 License along with this library; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA</p>
-<hr><!--
-$Id: README.html 152 2012-09-01 07:43:51Z oparviai $
--->
+<hr><!--
+$Id: README.html 168 2012-12-28 20:55:19Z oparviai $-->
+    <p>
+        <i>RREADME.html file updated on 28-Dec-2012</i></p>
 </body>
 </html>
