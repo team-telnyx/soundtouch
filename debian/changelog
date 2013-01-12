@@ -1,3 +1,10 @@
+soundtouch (1.7.1-1) experimental; urgency=low
+
+  * New upstream release.
+  * Remove empty debian/patches/series.
+
+ -- Alessio Treglia <alessio@debian.org>  Sat, 12 Jan 2013 14:25:00 +0000
+
 soundtouch (1.7.0-2) experimental; urgency=low
 
   * Remove 01_remove_sse.patch, no longer needed.
