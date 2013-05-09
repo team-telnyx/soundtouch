@@ -1,3 +1,11 @@
+soundtouch (1.7.1-2) unstable; urgency=low
+
+  * Upload to unstable.
+  * Use canonical URL for VCS fields.
+  * Bump Standards.
+
+ -- Alessio Treglia <alessio@debian.org>  Thu, 09 May 2013 12:44:43 +0200
+
 soundtouch (1.7.1-1) experimental; urgency=low
 
   * New upstream release.
