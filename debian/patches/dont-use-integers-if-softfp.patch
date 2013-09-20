@@ -7,9 +7,9 @@ Bug-Debian: http://bugs.debian.org/723681
 Forwarded: not-needed
 Last-Update: 2013-09-19
 
---- soundtouch-1.7.1.orig/include/STTypes.h
-+++ soundtouch-1.7.1/include/STTypes.h
-@@ -78,13 +78,6 @@ namespace soundtouch
+--- a/include/STTypes.h
++++ b/include/STTypes.h
+@@ -78,13 +78,6 @@
      //#undef SOUNDTOUCH_INTEGER_SAMPLES
      //#undef SOUNDTOUCH_FLOAT_SAMPLES
  
