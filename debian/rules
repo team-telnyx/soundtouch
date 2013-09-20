@@ -13,5 +13,8 @@ override_dh_strip:
 	dh_strip --package=libsoundtouch0 --dbg-package=libsoundtouch0-dbg
 	dh_strip --package=soundstretch --dbg-package=soundstretch-dbg
 
+override_dh_makeshlibs:
+	dh_makeshlibs -plibsoundtouch0 -V 'libsoundtouch0 (>= 1.7.1-3~)'
+
 %:
 	dh $@ --parallel --with autoreconf
