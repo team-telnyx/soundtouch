@@ -41,7 +41,7 @@ Depends:
  ${misc:Depends},
  ${shlibs:Depends}
 Breaks:
- gst-plugins-bad1.0 (<= 1.0.10-3) [armel],
+ gstreamer1.0-plugins-bad (<= 1.0.10-3) [armel],
  yatm (<= 0.8-1) [armel]
 Description: Sound stretching library
  SoundTouch is a library that can be used to change pitch and time
