@@ -1,3 +1,11 @@
+soundtouch (1.7.1-4) unstable; urgency=low
+
+  * Team upload.
+  * debian/control: Fix Breaks of libsoundtouch0. The binary package is called
+    gstreamer1.0-plugins-bad and not gst-plugins-bad1.0.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Mon, 23 Sep 2013 00:24:35 +0200
+
 soundtouch (1.7.1-3) unstable; urgency=low
 
   * Team upload.
