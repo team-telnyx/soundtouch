@@ -1,3 +1,18 @@
+soundtouch (1.7.1-3) unstable; urgency=low
+
+  * Team upload.
+  * debian/patches/dont-use-integers-if-softp.patch: Revert ABI breakage on
+    armel. Don't use integers instead of floats if __SOFTP__ is defined.
+    (Closes: #723681)
+  * debian/control:
+    - libsoundtouch-dev: Don't mark as M-A: same. It contains arch-dependent
+      files in /usr/include/soundtouch. (Closes: #707751)
+    - libsoundtouch0: Add Breaks on gstreamer1.0-plugins-bad and yatm (armel
+      only). They have been built against the broken ABI.
+  * debian/rules: Bump shlibs of libsoundtouch0 to >= 1.7.1-3~.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Sun, 22 Sep 2013 16:00:23 +0200
+
 soundtouch (1.7.1-2) unstable; urgency=low
 
   * Upload to unstable.
