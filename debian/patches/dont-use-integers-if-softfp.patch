@@ -9,9 +9,9 @@ Last-Update: 2013-09-19
 
 --- a/include/STTypes.h
 +++ b/include/STTypes.h
-@@ -78,13 +78,6 @@
-     //#undef SOUNDTOUCH_INTEGER_SAMPLES
-     //#undef SOUNDTOUCH_FLOAT_SAMPLES
+@@ -89,13 +89,6 @@
+     /// runtime performance so recommendation is to keep this off.
+     // #define USE_MULTICH_ALWAYS
  
 -    #if (defined(__SOFTFP__))
 -        // For Android compilation: Force use of Integer samples in case that
