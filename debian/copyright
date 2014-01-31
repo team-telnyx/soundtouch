@@ -4,13 +4,13 @@ Upstream-Contact: Olli Parviainen <oparviai@iki.fi>
 Source: http://www.surina.net/soundtouch/sourcecode.html
 
 Files: *
-Copyright: 2001-2012 Olli Parviainen <oparviai@iki.fi>
+Copyright: 2001-2014 Olli Parviainen <oparviai@iki.fi>
 License: LGPL-2.1+
 
 Files: debian/*
 Copyright:
- 2011-2012 Alessio Treglia <alessio@debian.org>
- 2010-2012 Miguel A. Colón Vélez <debian.micove@gmail.com>
+ 2011-2014 Alessio Treglia <alessio@debian.org>
+ 2010-2014 Miguel A. Colón Vélez <debian.micove@gmail.com>
  2004-2008 Guenter Geiger (Debian/GNU) <geiger@debian.org>
 License: LGPL-2.1+
 
