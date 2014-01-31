@@ -8,10 +8,10 @@
 ///
 ////////////////////////////////////////////////////////////////////////////////
 //
-// Last changed  : $Date: 2012-04-04 22:47:28 +0300 (Wed, 04 Apr 2012) $
+// Last changed  : $Date: 2014-01-07 21:41:23 +0200 (Tue, 07 Jan 2014) $
 // File revision : $Revision: 4 $
 //
-// $Id: main.cpp 141 2012-04-04 19:47:28Z oparviai $
+// $Id: main.cpp 187 2014-01-07 19:41:23Z oparviai $
 //
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -48,8 +48,8 @@
 using namespace soundtouch;
 using namespace std;
 
-// Processing chunk size
-#define BUFF_SIZE           2048
+// Processing chunk size (size chosen to be divisible by 2, 4, 6, 8, 10, 12, 14, 16 channels ...)
+#define BUFF_SIZE           6720
 
 #if _WIN32
     #include <io.h>
@@ -65,7 +65,7 @@ using namespace std;
 
 static const char _helloText[] = 
     "\n"
-    "   SoundStretch v%s -  Written by Olli Parviainen 2001 - 2012\n"
+    "   SoundStretch v%s -  Written by Olli Parviainen 2001 - 2014\n"
     "==================================================================\n"
     "author e-mail: <oparviai"
     "@"
