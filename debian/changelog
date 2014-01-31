@@ -1,3 +1,23 @@
+soundtouch (1.8.0-1) UNRELEASED; urgency=low
+
+  * New upstream release.
+    - Added support for multi-channel audio processing.
+    - Added support for cubic and shannon interpolation for rate and pitch shift
+      effects besides the original linear interpolation, to reduce aliasing at
+      high frequencies due to interpolation. Cubic interpolation is used as
+      default for floating point processing, and linear interpolation for
+      integer processing.
+    - Fixed bug in anti-alias filtering that limited stop-band attenuation to
+      -10 dB instead of <-50dB, and increased filter length from 32 to 64 taps
+      to further reduce aliasing due to frequency folding.
+    - Performance improvements in cross-correlation algorithm.
+    - Other bug and compatibility fixes.
+  * Refresh patches.
+  * Bump Standards-Version to 3.9.5 (no changes needed).
+  * debian/copyright: Update the copyright years.
+
+ -- Miguel A. Colón Vélez <debian.micove@gmail.com>  Fri, 31 Jan 2014 15:13:35 -0500
+
 soundtouch (1.7.1-5) unstable; urgency=low
 
   * Team upload.
