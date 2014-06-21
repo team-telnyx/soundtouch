@@ -1,4 +1,4 @@
-soundtouch (1.8.0-1) UNRELEASED; urgency=low
+soundtouch (1.8.0-1) unstable; urgency=low
 
   * New upstream release.
     - Added support for multi-channel audio processing.
