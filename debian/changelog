@@ -1,3 +1,9 @@
+soundtouch (1.8.0-2) UNRELEASED; urgency=medium
+
+  * UNRELEASED
+
+ -- Miguel A. Colón Vélez <debian.micove@gmail.com>  Sun, 23 Nov 2014 04:49:42 -0500
+
 soundtouch (1.8.0-1) unstable; urgency=low
 
   * New upstream release.
