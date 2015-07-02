@@ -8,10 +8,10 @@
 ///
 ////////////////////////////////////////////////////////////////////////////////
 //
-// Last changed  : $Date: 2014-01-07 21:41:23 +0200 (Tue, 07 Jan 2014) $
+// Last changed  : $Date: 2015-05-18 17:32:21 +0000 (Mon, 18 May 2015) $
 // File revision : $Revision: 4 $
 //
-// $Id: main.cpp 187 2014-01-07 19:41:23Z oparviai $
+// $Id: main.cpp 219 2015-05-18 17:32:21Z oparviai $
 //
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -65,7 +65,7 @@ using namespace std;
 
 static const char _helloText[] = 
     "\n"
-    "   SoundStretch v%s -  Written by Olli Parviainen 2001 - 2014\n"
+    "   SoundStretch v%s -  Written by Olli Parviainen 2001 - 2015\n"
     "==================================================================\n"
     "author e-mail: <oparviai"
     "@"
@@ -299,7 +299,7 @@ int main(const int nParams, const char * const paramStr[])
         // Open input & output files
         openFiles(&inFile, &outFile, params);
 
-        if (params->detectBPM == TRUE)
+        if (params->detectBPM == true)
         {
             // detect sound BPM (and adjust processing parameters
             //  accordingly if necessary)

@@ -8,10 +8,10 @@
 ///
 ////////////////////////////////////////////////////////////////////////////////
 //
-// Last changed  : $Date: 2011-09-02 21:56:11 +0300 (Fri, 02 Sep 2011) $
+// Last changed  : $Date: 2014-04-06 15:57:21 +0000 (Sun, 06 Apr 2014) $
 // File revision : $Revision: 4 $
 //
-// $Id: RunParameters.cpp 131 2011-09-02 18:56:11Z oparviai $
+// $Id: RunParameters.cpp 195 2014-04-06 15:57:21Z oparviai $
 //
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -130,8 +130,8 @@ RunParameters::RunParameters(const int nParams, const char * const paramStr[])
     quick = 0;
     noAntiAlias = 0;
     goalBPM = 0;
-    speech = FALSE;
-    detectBPM = FALSE;
+    speech = false;
+    detectBPM = false;
 
     // Get input & output file names
     inFileName = (char*)paramStr[1];
@@ -262,7 +262,7 @@ void RunParameters::parseSwitchParam(const string &str)
 
         case 'b' :
             // switch '-bpm=xx'
-            detectBPM = TRUE;
+            detectBPM = true;
             try
             {
                 goalBPM = parseSwitchValue(str);
@@ -291,7 +291,7 @@ void RunParameters::parseSwitchParam(const string &str)
 
         case 's' :
             // switch '-speech'
-            speech = TRUE;
+            speech = true;
             break;
 
         default:
