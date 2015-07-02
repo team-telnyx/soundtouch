@@ -1,6 +1,6 @@
 ## Process this file with automake to create Makefile.in
 ##
-## $Id: Makefile.am 128 2011-07-17 10:59:56Z oparviai $
+## $Id: Makefile.am 209 2015-05-01 07:55:47Z oparviai $
 ##
 ## Copyright (C) 2003 - David W. Durham
 ## 
@@ -44,11 +44,11 @@ soundstretch_SOURCES=main.cpp RunParameters.cpp WavFile.cpp
 soundstretch_LDADD=../SoundTouch/libSoundTouch.la -lm
 
 ## linker flags. 
-# OP 2011-7-17 Linker flags disabled to prevent stripping symbols by default
-# soundstretch_LDFLAGS=-s
+# OP 2011-7-17 Linker flag -s disabled to prevent stripping symbols by default
+#soundstretch_LDFLAGS=-s
 
 ## additional compiler flags
-soundstretch_CXXFLAGS=-O3
+soundstretch_CXXFLAGS=-O3 $(AM_CXXFLAGS)
 
 #clean-local: 
 #	-rm -f additional-files-to-remove-on-make-clean

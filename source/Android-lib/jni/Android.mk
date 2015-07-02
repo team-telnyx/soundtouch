@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-# $Id: Android.mk 165 2012-12-28 19:55:23Z oparviai $
+# $Id: Android.mk 216 2015-05-18 15:28:41Z oparviai $
 
 LOCAL_PATH := $(call my-dir)
 
@@ -23,18 +23,30 @@ include $(CLEAR_VARS)
 LOCAL_MODULE    := soundtouch
 LOCAL_SRC_FILES := soundtouch-jni.cpp ../../SoundTouch/AAFilter.cpp  ../../SoundTouch/FIFOSampleBuffer.cpp \
                 ../../SoundTouch/FIRFilter.cpp ../../SoundTouch/cpu_detect_x86.cpp \
+                ../../SoundTouch/sse_optimized.cpp ../../SoundStretch/WavFile.cpp \
                 ../../SoundTouch/RateTransposer.cpp ../../SoundTouch/SoundTouch.cpp \
-                ../../SoundTouch/TDStretch.cpp ../../SoundTouch/BPMDetect.cpp ../../SoundTouch/PeakFinder.cpp
+                ../../SoundTouch/InterpolateCubic.cpp ../../SoundTouch/InterpolateLinear.cpp \
+                ../../SoundTouch/InterpolateShannon.cpp ../../SoundTouch/TDStretch.cpp \
+                ../../SoundTouch/BPMDetect.cpp ../../SoundTouch/PeakFinder.cpp 
 
 # for native audio
-LOCAL_LDLIBS    += -lgcc 
+LOCAL_SHARED_LIBRARIES += -lgcc 
 # --whole-archive -lgcc 
 # for logging
 LOCAL_LDLIBS    += -llog
 # for native asset manager
 #LOCAL_LDLIBS    += -landroid
-# don't export all symbols
-# added "-marm" switch to use arm instruction set instead of thumb for improved calculation performance.
-LOCAL_CFLAGS += -Wall -fvisibility=hidden -I ../../../include -D ST_NO_EXCEPTION_HANDLING -fdata-sections -ffunction-sections -marm
+
+# Custom Flags: 
+# -fvisibility=hidden : don't export all symbols
+LOCAL_CFLAGS += -fvisibility=hidden -I ../../../include -fdata-sections -ffunction-sections
+
+# OpenMP mode : enable these flags to enable using OpenMP for parallel computation 
+#LOCAL_CFLAGS += -fopenmp
+#LOCAL_LDFLAGS += -fopenmp
+
+
+# Use ARM instruction set instead of Thumb for improved calculation performance in ARM CPUs	
+LOCAL_ARM_MODE := arm
 
 include $(BUILD_SHARED_LIBRARY)

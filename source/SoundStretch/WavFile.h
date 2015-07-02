@@ -16,10 +16,10 @@
 ///
 ////////////////////////////////////////////////////////////////////////////////
 //
-// Last changed  : $Date: 2012-09-01 10:57:22 +0300 (Sat, 01 Sep 2012) $
+// Last changed  : $Date: 2014-10-05 16:20:24 +0000 (Sun, 05 Oct 2014) $
 // File revision : $Revision: 4 $
 //
-// $Id: WavFile.h 153 2012-09-01 07:57:22Z oparviai $
+// $Id: WavFile.h 200 2014-10-05 16:20:24Z oparviai $
 //
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -75,6 +75,14 @@ typedef struct
     short bits_per_sample;
 } WavFormat;
 
+/// WAV audio file 'fact' section header
+typedef struct 
+{
+    char  fact_field[4];
+    int   fact_len;
+    uint  fact_sample_len;
+} WavFact;
+
 /// WAV audio file 'data' section header
 typedef struct 
 {
@@ -88,6 +96,7 @@ typedef struct
 {
     WavRiff   riff;
     WavFormat format;
+    WavFact   fact;
     WavData   data;
 } WavHeader;
 
