@@ -1,0 +1,18 @@
+Description: Do not empty CXXFLAGS.
+ It removes:
+ CXXFLAGS=-g -O2 -fstack-protector-strong -Wformat -Werror=format-security
+Author: Miguel A. Colón Vélez <debian.micove@gmail.com>
+Forwarded: not-needed
+Last-Update: 2015-07-02
+    
+--- soundtouch-1.9.0.orig/configure.ac
++++ soundtouch-1.9.0/configure.ac
+@@ -199,7 +199,7 @@ fi
+ AC_SUBST([AM_CXXFLAGS], [$AM_CXXFLAGS])
+ 
+ # Empty default CXXFLAGS so user can set them if desirable
+-AC_SUBST([CXXFLAGS], [ ])
++#AC_SUBST([CXXFLAGS], [ ])
+ 
+ 
+ # SSTypes.h by default enables optimizations. Those already got disabled if
