@@ -1,6 +1,6 @@
 dnl SoundTouch configure.ac, by David W. Durham
 dnl
-dnl $Id: configure.ac 221 2015-05-18 17:54:01Z oparviai $
+dnl $Id: configure.ac 224 2015-07-12 18:52:19Z oparviai $
 dnl
 dnl This file is part of SoundTouch, an audio processing library for pitch/time adjustments
 dnl 
@@ -151,7 +151,7 @@ if test "x$enable_x86_optimizations" = "xyes" -a "x$ac_cv_header_cpuid_h" = "xye
 		echo "****** No MMX support found ******"
 		if test "x$enable_integer_samples" = "xyes"; then
 		        echo "****** Disabling optimizations. Using integer samples with no MMX support ******"
-		        AC_DEFINE([SOUNDTOUCH_DISABLE_X86_OPTIMIZATIONS],[1],[Do not use x86 optimizations])
+		        CPPFLAGS="-DSOUNDTOUCH_DISABLE_X86_OPTIMIZATIONS $CPPFLAGS"
 		fi
 	fi
 
@@ -185,21 +185,21 @@ if test "x$enable_x86_optimizations" = "xyes" -a "x$ac_cv_header_cpuid_h" = "xye
 		echo "****** No SSE support found ******"
 		if test "x$enable_integer_samples" != "xyes"; then
 		        echo "****** Disabling optimizations. Using float samples with no SSE support ******"
-		        AC_DEFINE([SOUNDTOUCH_DISABLE_X86_OPTIMIZATIONS],[1],[Do not use x86 optimizations])
+		        CPPFLAGS="-DSOUNDTOUCH_DISABLE_X86_OPTIMIZATIONS $CPPFLAGS"
 		fi
 	fi
 
 else
 	# Disable optimizations in SSTypes.h since the user requested it.
         echo "****** x86 optimizations disabled ******"
-        AC_DEFINE([SOUNDTOUCH_DISABLE_X86_OPTIMIZATIONS],[1],[Do not use x86 optimizations])
+        CPPFLAGS="-DSOUNDTOUCH_DISABLE_X86_OPTIMIZATIONS $CPPFLAGS"
 fi
 
 # Set AM_CXXFLAGS
 AC_SUBST([AM_CXXFLAGS], [$AM_CXXFLAGS])
 
 # Empty default CXXFLAGS so user can set them if desirable
-AC_SUBST([CXXFLAGS], [ ])
+#AC_SUBST([CXXFLAGS], [ ])
 
 
 # SSTypes.h by default enables optimizations. Those already got disabled if
