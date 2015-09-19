@@ -32,7 +32,7 @@ Description: Development files for the sound stretching library
  soundfiles independently.
  .
  This package contains the development files used to build programs that use
- libsoundtouch0.
+ the SoundTouch shared library.
 
 Package: libsoundtouch0
 Architecture: any
@@ -49,7 +49,7 @@ Description: Sound stretching library
  SoundTouch is a library that can be used to change pitch and time
  of soundfiles independently.
  .
- This package contains the libsoundtouch0 shared library.
+ This package contains the SoundTouch shared library.
 
 Package: libsoundtouch0-dbg
 Priority: extra
@@ -63,7 +63,7 @@ Description: Debugging symbols for the sound stretching library
  SoundTouch is a library that can be used to change pitch and time of
  soundfiles independently.
  .
- This package contains the debugging symbols for libsoundtouch0.
+ This package contains the debugging symbols for the SoundTouch shared library.
 
 Package: soundstretch
 Section: sound
@@ -76,7 +76,7 @@ Description: Stretches and pitch-shifts sound independently
  This is especially useful for musicians, who want to listen to a song
  played slowly, without having the pitch altered.
  .
- This program uses libsoundtouch for the actual work.
+ This program uses the SoundTouch shared library for the actual work.
 
 Package: soundstretch-dbg
 Priority: extra
