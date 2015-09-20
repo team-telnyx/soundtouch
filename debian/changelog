@@ -1,12 +1,14 @@
-soundtouch (1.9.1-2) experimental; urgency=medium
+soundtouch (1.9.2-1) experimental; urgency=medium
 
-  * Bump the SONAME due to ABI Breakage in the 1.9.1 release.
-    - Rename libsoundtouch0[-dbg] to libsoundtouch1[-dbg].
+  * New upstream release.
+    - Bump the SONAME due to ABI Breakage in the 1.9.1 release.
+  * Bump shlibs version to account for the new SONAME.
   * debian/control:
+    - Rename libsoundtouch0[-dbg] to libsoundtouch1[-dbg].
     - Update the description of the packages.
     - Remove obsolete Breaks/Provides.
 
- -- Miguel A. Colón Vélez <debian.micove@gmail.com>  Sat, 19 Sep 2015 01:04:04 -0400
+ -- Miguel A. Colón Vélez <debian.micove@gmail.com>  Sun, 20 Sep 2015 05:38:30 -0400
 
 soundtouch (1.9.1-1) unstable; urgency=medium
 
