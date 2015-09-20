@@ -6,9 +6,9 @@ soundtouch (1.9.2-1) experimental; urgency=medium
   * debian/control:
     - Rename libsoundtouch0[-dbg] to libsoundtouch1[-dbg].
     - Update the description of the packages.
-    - Remove obsolete Breaks/Provides.
+    - Update the Breaks/Conflicts/Provides relationships.
 
- -- Miguel A. Colón Vélez <debian.micove@gmail.com>  Sun, 20 Sep 2015 05:38:30 -0400
+ -- Miguel A. Colón Vélez <debian.micove@gmail.com>  Sun, 20 Sep 2015 16:16:58 -0400
 
 soundtouch (1.9.1-1) unstable; urgency=medium
 
