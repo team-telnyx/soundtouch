@@ -1,3 +1,9 @@
+soundtouch (1.9.2-2) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Miguel A. Colón Vélez <debian.micove@gmail.com>  Mon, 28 Sep 2015 10:13:25 -0400
+
 soundtouch (1.9.2-1) experimental; urgency=medium
 
   * New upstream release.
