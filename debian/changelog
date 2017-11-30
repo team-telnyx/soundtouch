@@ -1,3 +1,13 @@
+soundtouch (1.9.2-3) unstable; urgency=medium
+
+  * Team upload.
+  * Add patch to fix
+    - CVE-2017-9258 (Closes: #870854)
+    - CVE-2017-9259 (Closes: #870856)
+    - CVE-2017-9260 (Closes: #870857)
+
+ -- Gabor Karsay <gabor.karsay@gmx.at>  Thu, 30 Nov 2017 14:59:52 +0100
+
 soundtouch (1.9.2-2) unstable; urgency=medium
 
   * Upload to unstable.
