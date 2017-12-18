@@ -6,9 +6,9 @@ Uploaders: Miguel A. Colón Vélez <debian.micove@gmail.com>
 Build-Depends:
  debhelper (>= 11),
 Standards-Version: 3.9.6
-Homepage: http://www.surina.net/soundtouch/
-Vcs-Git: git://anonscm.debian.org/pkg-multimedia/soundtouch.git
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-multimedia/soundtouch.git
+Homepage: https://www.surina.net/soundtouch/
+Vcs-Git: https://anonscm.debian.org/git/pkg-multimedia/soundtouch.git
+Vcs-Browser: https://anonscm.debian.org/git/pkg-multimedia/soundtouch.git
 
 Package: libsoundtouch1
 Architecture: any
