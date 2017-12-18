@@ -20,4 +20,4 @@ override_dh_makeshlibs:
 	dh_makeshlibs -plibsoundtouch1 -V 'libsoundtouch1 (>= 1.9.2)'
 
 %:
-	dh $@ --parallel --with autoreconf
+	dh $@
