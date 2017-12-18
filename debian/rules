@@ -13,8 +13,9 @@ override_dh_installchangelogs:
 	dh_installchangelogs -plibsoundtouch1 -psoundstretch
 
 override_dh_strip:
-	dh_strip --package=libsoundtouch1 --dbg-package=libsoundtouch1-dbg
-	dh_strip --package=soundstretch --dbg-package=soundstretch-dbg
+	# Can be removed after next upstream version bump
+	dh_strip -psoundstretch --dbgsym-migration='soundstretch-dbg (<< 1.9.2-3~)'
+	dh_strip --remaining-packages
 
 override_dh_makeshlibs:
 	dh_makeshlibs -plibsoundtouch1 -V 'libsoundtouch1 (>= 1.9.2)'
