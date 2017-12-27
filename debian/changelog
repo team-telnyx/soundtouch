@@ -274,14 +274,14 @@ soundtouch (1.5.0-1) experimental; urgency=low
     - Mantain soundtouch-1.4.pc for compatibility.
   * Add a debian watch file. (closes: #543729)
   * Bump Standards-Version to 3.9.1.
-  * Rename libsoundtouch1c2 to libsoundtouch0 and libsoundtouch1-dev to 
+  * Rename libsoundtouch1c2 to libsoundtouch0 and libsoundtouch1-dev to
     libsoundtouch0-dev so we comply with policy.
     - Obsolete c2 naming due to CXX transition is not needed anymore.
-    - ardour used to provide libsoundtouch0 and libsoundtouch0-dev as mentioned 
+    - ardour used to provide libsoundtouch0 and libsoundtouch0-dev as mentioned
       in #271108. These packages were removed in 2004.
   * Convert package to 3.0 (quilt) format:
     - Bump debhelper compatibility level to 8.
-    - Update build dependencies. 
+    - Update build dependencies.
     - Fix paths in *.install and *.docs files.
     - Update rules file.
     - Update patches to quilt and add headers.
@@ -290,7 +290,7 @@ soundtouch (1.5.0-1) experimental; urgency=low
     - Add ${misc:Depends} to libsoundtouch0.
     - Update and reformat copyright file.
   * Add packages lib32soundtouch0-dev and lib32soundtouch0.
-  * Instead of providing the same doc folders. Create a symlink from the doc 
+  * Instead of providing the same doc folders. Create a symlink from the doc
     folder of libsoundtouch0-dev, lib32soundtouch0-dev and lib32soundtouch0 to
     the doc folder of libsoundtouch0.
 
@@ -369,7 +369,7 @@ soundtouch (1.2.1-8) unstable; urgency=low
 
 soundtouch (1.2.1-7) unstable; urgency=low
 
-  * C++ transition: renamed libsoundtouch1 to libsoundtouch1c2 
+  * C++ transition: renamed libsoundtouch1 to libsoundtouch1c2
     (closes: #318972,#318971)
 
  -- Guenter Geiger (Debian/GNU) <geiger@debian.org>  Tue, 19 Jul 2005 10:15:05 +0200
