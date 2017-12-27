@@ -1,12 +1,27 @@
 soundtouch (1.9.2-3) unstable; urgency=medium
 
   * Team upload.
+
+  [ Gabor Karsay ]
   * Add patch to fix
     - CVE-2017-9258 (Closes: #870854)
     - CVE-2017-9259 (Closes: #870856)
     - CVE-2017-9260 (Closes: #870857)
 
- -- Gabor Karsay <gabor.karsay@gmx.at>  Thu, 30 Nov 2017 14:59:52 +0100
+  [ James Cowgill ]
+  * Use secure URLs where possible
+  * debian/changelog:
+    - Trim trailing whitespace in d/changelog.
+  * debian/compat:
+    - Use debhelper compat 11.
+  * debian/control:
+    - Drop manual debug packages.
+    - Fix spelling mistake in soundstretch package description.
+    - Bump standards version to 4.1.2.
+    - Set Rules-Requires-Root: no.
+    - Use canonical Vcs-* URLs.
+
+ -- James Cowgill <jcowgill@debian.org>  Wed, 27 Dec 2017 16:31:50 +0000
 
 soundtouch (1.9.2-2) unstable; urgency=medium
 
