@@ -55,7 +55,7 @@ Depends:
  ${misc:Depends},
  ${shlibs:Depends}
 Description: Stretches and pitch-shifts sound independently
- This program can strech and pitch-shift .wav-files independently.
+ This program can stretch and pitch-shift .wav-files independently.
  This is especially useful for musicians, who want to listen to a song
  played slowly, without having the pitch altered.
  .
