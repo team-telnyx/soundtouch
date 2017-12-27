@@ -5,6 +5,7 @@ Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alio
 Uploaders: Miguel A. Colón Vélez <debian.micove@gmail.com>
 Build-Depends:
  debhelper (>= 11),
+Rules-Requires-Root: no
 Standards-Version: 4.1.2
 Homepage: https://www.surina.net/soundtouch/
 Vcs-Git: https://anonscm.debian.org/git/pkg-multimedia/soundtouch.git
