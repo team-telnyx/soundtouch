@@ -1,8 +1,12 @@
-soundtouch (1.9.2-2+deb9u1) UNRELEASED; urgency=medium
+soundtouch (1.9.2-2+deb9u1) stretch; urgency=medium
 
-  *
+  [ Gabor Karsay ]
+  * Add patch to fix
+    - CVE-2017-9258 (Closes: #870854)
+    - CVE-2017-9259 (Closes: #870856)
+    - CVE-2017-9260 (Closes: #870857)
 
- -- James Cowgill <jcowgill@debian.org>  Wed, 27 Dec 2017 16:33:06 +0000
+ -- James Cowgill <jcowgill@debian.org>  Wed, 27 Dec 2017 16:34:15 +0000
 
 soundtouch (1.9.2-2) unstable; urgency=medium
 
