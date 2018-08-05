@@ -1,5 +1,7 @@
 soundtouch (2.0.0-1) unstable; urgency=medium
 
+  * Team upload.
+
   [ Ondřej Nový ]
   * d/control: Set Vcs-* to salsa.debian.org
 
