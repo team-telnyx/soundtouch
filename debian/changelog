@@ -1,3 +1,16 @@
+soundtouch (2.0.0-1) UNRELEASED; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+
+  [ Felipe Sateler ]
+  * Change maintainer address to debian-multimedia@lists.debian.org
+
+  [ Sebastian Ramacher ]
+  * New upstream release.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Sun, 05 Aug 2018 15:02:27 +0200
+
 soundtouch (1.9.2-3) unstable; urgency=medium
 
   * Team upload.
