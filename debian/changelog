@@ -1,4 +1,4 @@
-soundtouch (2.0.0-1) UNRELEASED; urgency=medium
+soundtouch (2.0.0-1) unstable; urgency=medium
 
   [ Ondřej Nový ]
   * d/control: Set Vcs-* to salsa.debian.org
@@ -8,8 +8,17 @@ soundtouch (2.0.0-1) UNRELEASED; urgency=medium
 
   [ Sebastian Ramacher ]
   * New upstream release.
+  * debian/:
+    - Install README.html only in soundstretch
+    - Remove symlinked doc dirs.
+  * debuan/rules:
+    - Bump shlibs.
+  * debian/control:
+    - Remove old Breaks+Replaces.
+    - Bump Standards-Version
+  * debian/copyright: Update copyright years.
 
- -- Sebastian Ramacher <sramacher@debian.org>  Sun, 05 Aug 2018 15:02:27 +0200
+ -- Sebastian Ramacher <sramacher@debian.org>  Sun, 05 Aug 2018 15:34:06 +0200
 
 soundtouch (1.9.2-3) unstable; urgency=medium
 
@@ -444,4 +453,3 @@ soundtouch (1.2.1-1) unstable; urgency=low
   * Initial Release.
 
  -- Guenter Geiger (Debian/GNU) <geiger@debian.org>  Tue, 10 Aug 2004 20:15:01 +0200
-
