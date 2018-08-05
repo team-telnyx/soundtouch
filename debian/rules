@@ -6,11 +6,6 @@
 override_dh_auto_configure:
 	dh_auto_configure -- --disable-silent-rules
 
-override_dh_installdocs:
-	dh_installdocs -plibsoundtouch1 -psoundstretch
-
-override_dh_installchangelogs:
-	dh_installchangelogs -plibsoundtouch1 -psoundstretch
 
 override_dh_strip:
 	# Can be removed after next upstream version bump
