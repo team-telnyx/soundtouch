@@ -18,7 +18,7 @@ override_dh_strip:
 	dh_strip --remaining-packages
 
 override_dh_makeshlibs:
-	dh_makeshlibs -plibsoundtouch1 -V 'libsoundtouch1 (>= 1.9.2)'
+	dh_makeshlibs -plibsoundtouch1 -V 'libsoundtouch1 (>= 2.0.0)'
 
 %:
 	dh $@
