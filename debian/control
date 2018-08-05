@@ -19,10 +19,6 @@ Pre-Depends:
 Depends:
  ${misc:Depends},
  ${shlibs:Depends}
-Breaks:
- libsoundtouch1c2
-Replaces:
- libsoundtouch1c2
 Description: Sound stretching library
  SoundTouch is a library that can be used to change pitch and time
  of soundfiles independently.
@@ -36,12 +32,6 @@ Multi-Arch: same
 Depends:
  libsoundtouch1 (= ${binary:Version}),
  ${misc:Depends}
-Breaks:
- libsoundtouch1-dev
-Replaces:
- libsoundtouch1-dev
-Provides:
- libsoundtouch1-dev
 Description: Development files for the sound stretching library
  SoundTouch is a library that can be used to change pitch and time of
  soundfiles independently.
