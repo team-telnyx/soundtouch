@@ -2,6 +2,7 @@ Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: SoundTouch
 Upstream-Contact: Olli Parviainen <oparviai@iki.fi>
 Source: https://www.surina.net/soundtouch/sourcecode.html
+Files-Excluded: source/csharp-example/*
 
 Files: *
 Copyright: 2001-2017 Olli Parviainen <oparviai@iki.fi>
