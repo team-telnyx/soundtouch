@@ -9,10 +9,10 @@ soundtouch (2.1.2+ds1-1) unstable; urgency=medium
     - Fix assertion failure (CVE-2018-14044). (Closes: #905504)
     - Fix heap corruption (CVE-2018-17098). (Closes: #913894)
   * debian/watch: Update watch file for gitlab
-  * debian/copyright: Repack to remove DLLs.
+  * debian/copyright: Repack to remove DLLs and pre-built JARs for Android.
   * debian/control: Bump Standards-Version.
 
- -- Sebastian Ramacher <sramacher@debian.org>  Thu, 20 Dec 2018 23:10:05 +0100
+ -- Sebastian Ramacher <sramacher@debian.org>  Thu, 20 Dec 2018 23:16:03 +0100
 
 soundtouch (2.0.0-1) unstable; urgency=medium
 
