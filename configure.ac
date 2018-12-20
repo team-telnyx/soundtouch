@@ -1,7 +1,3 @@
-dnl SoundTouch configure.ac, by David W. Durham
-dnl
-dnl $Id: configure.ac 253 2017-07-30 09:35:00Z oparviai $
-dnl
 dnl This file is part of SoundTouch, an audio processing library for pitch/time adjustments
 dnl 
 dnl SoundTouch is free software; you can redistribute it and/or modify it under the
@@ -19,7 +15,7 @@ dnl this program; if not, write to the Free Software Foundation, Inc., 59 Temple
 dnl Place - Suite 330, Boston, MA  02111-1307, USA
 # Process this file with autoconf to produce a configure script.
 
-AC_INIT([SoundTouch], [2.0.0], [http://www.surina.net/soundtouch])
+AC_INIT([SoundTouch], [2.1.2], [http://www.surina.net/soundtouch])
 dnl Default to libSoundTouch.so.$LIB_SONAME.0.0
 LIB_SONAME=1
 AC_SUBST(LIB_SONAME)
@@ -35,8 +31,8 @@ AC_DISABLE_STATIC	dnl This makes libtool only build shared libs
 
 AC_LANG(C++)
 
-
-
+# Set AR_FLAGS to avoid build warning "ar: `u' modifier ignored since `D' is the default (see `U')"
+AR_FLAGS='cr'
 
 
 dnl ############################################################################
