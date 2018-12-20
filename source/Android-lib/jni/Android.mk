@@ -12,12 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-# $Id: Android.mk 216 2015-05-18 15:28:41Z oparviai $
 
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
+LOCAL_C_INCLUDES += $(LOCAL_PATH)/../../../include $(LOCAL_PATH)/../../SoundStretch
 # *** Remember: Change -O0 into -O2 in add-applications.mk ***
 
 LOCAL_MODULE    := soundtouch
@@ -39,7 +39,7 @@ LOCAL_LDLIBS    += -llog
 
 # Custom Flags: 
 # -fvisibility=hidden : don't export all symbols
-LOCAL_CFLAGS += -fvisibility=hidden -I ../../../include -fdata-sections -ffunction-sections
+LOCAL_CFLAGS += -fvisibility=hidden -fdata-sections -ffunction-sections
 
 # OpenMP mode : enable these flags to enable using OpenMP for parallel computation 
 #LOCAL_CFLAGS += -fopenmp
