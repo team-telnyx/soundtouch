@@ -1,3 +1,19 @@
+soundtouch (2.1.2+ds1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+    - Fix double free (CVE-2018-17097). (Closes: #913895)
+    - Fix assertion failure (CVE-2018-17096).
+    - Fix assertion failure (CVE-2018-14045). (Closes: #905504)
+    - Fix buffer overflow (CVE-2018-1000223). (Closes: #905491)
+    - Fix assertion failure (CVE-2018-14044). (Closes: #905504)
+    - Fix heap corruption (CVE-2018-17098). (Closes: #913894)
+  * debian/watch: Update watch file for gitlab
+  * debian/copyright: Repack to remove DLLs.
+  * debian/control: Bump Standards-Version.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Thu, 20 Dec 2018 23:10:05 +0100
+
 soundtouch (2.0.0-1) unstable; urgency=medium
 
   * Team upload.
