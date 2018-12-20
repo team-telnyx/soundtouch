@@ -3,6 +3,7 @@ Upstream-Name: SoundTouch
 Upstream-Contact: Olli Parviainen <oparviai@iki.fi>
 Source: https://www.surina.net/soundtouch/sourcecode.html
 Files-Excluded: source/csharp-example/*
+                source/Android-lib/*
 
 Files: *
 Copyright: 2001-2017 Olli Parviainen <oparviai@iki.fi>
