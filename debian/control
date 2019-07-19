@@ -4,7 +4,7 @@ Section: libs
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
 Uploaders: Miguel A. Colón Vélez <debian.micove@gmail.com>
 Build-Depends:
- debhelper (>= 11),
+ debhelper-compat (= 11),
 Rules-Requires-Root: no
 Standards-Version: 4.2.1
 Homepage: https://www.surina.net/soundtouch/
