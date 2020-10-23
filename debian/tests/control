@@ -1,2 +1,3 @@
 Tests: stretch
 Depends: @, csound-doc, gzip
+Restrictions: allow-stderr
