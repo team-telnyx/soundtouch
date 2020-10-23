@@ -9,7 +9,7 @@ same time
 
 Visit [SoundTouch website](https://www.surina.net/soundtouch) and see the [README file](README.html) for more information and audio examples.
 
-### The latest stable release is 2.1.2
+### The latest stable release is 2.2
 
 ## Example
 
@@ -19,7 +19,7 @@ Use SoundStretch example app for modifying wav audio files, for example as follo
 soundstretch my_original_file.wav output_file.wav -tempo=+15 -pitch=-3
 ```
 
-See the [README file](README.html) for more usage examples and instructions how to build SoundTouch + SoundStretch.
+See the [README file](http://soundtouch.surina.net/README.html) for more usage examples and instructions how to build SoundTouch + SoundStretch.
 
 Ready [SoundStretch application executables](https://www.surina.net/soundtouch/download.html) are available for download for Windows and Mac OS.
 
