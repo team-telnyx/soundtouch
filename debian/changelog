@@ -1,3 +1,22 @@
+soundtouch (2.2+ds1-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Use debhelper-compat instead of debian/compat
+
+  [ Dennis Braun ]
+  * New upstream version 2.2+ds1
+  * Add an soundstretch autopkgtest
+  * Add me as uploader
+  * Bump dh-compat to 13
+  * Bump S-V to 4.5.0
+  * Update d/copyright year
+  * Add me to the d/ section of d/copyright
+  * d/copyright: http > https
+  * d/rules: Add hardening
+  * Add d/upstream/metadata
+
+ -- Dennis Braun <d_braun@kabelmail.de>  Fri, 23 Oct 2020 22:49:29 +0200
+
 soundtouch (2.1.2+ds1-1) unstable; urgency=medium
 
   * Team upload.
