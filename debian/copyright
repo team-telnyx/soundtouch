@@ -11,6 +11,7 @@ License: LGPL-2.1+
 
 Files: debian/*
 Copyright:
+ 2020 Dennis Braun <d_braun@kabelmail.de>
  2011-2014 Alessio Treglia <alessio@debian.org>
  2010-2014 Miguel A. Colón Vélez <debian.micove@gmail.com>
  2004-2008 Guenter Geiger (Debian/GNU) <geiger@debian.org>
