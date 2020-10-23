@@ -6,7 +6,7 @@ Files-Excluded: source/csharp-example/*
                 source/Android-lib/*
 
 Files: *
-Copyright: 2001-2017 Olli Parviainen <oparviai@iki.fi>
+Copyright: 2001-2020 Olli Parviainen <oparviai@iki.fi>
 License: LGPL-2.1+
 
 Files: debian/*
