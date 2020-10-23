@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -eu
+
+cp /usr/share/doc/csound-doc/html/examples/beats.wav.gz . && gunzip beats.wav.gz
+echo 'Copied beats.wav from csound-doc'
+
+soundstretch beats.wav beats_stretched.wav -tempo=+17 -pitch=-7
+echo 'Successfully stretched and pitched beats.wav & saved to beats_stretched.wav'
