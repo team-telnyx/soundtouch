@@ -2,7 +2,8 @@ Source: soundtouch
 Priority: optional
 Section: libs
 Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
-Uploaders: Miguel A. Colón Vélez <debian.micove@gmail.com>
+Uploaders: Miguel A. Colón Vélez <debian.micove@gmail.com>,
+ Dennis Braun <d_braun@kabelmail.de>
 Build-Depends:
  debhelper-compat (= 11),
 Rules-Requires-Root: no
