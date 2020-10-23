@@ -13,9 +13,10 @@ soundtouch (2.2+ds1-1) unstable; urgency=medium
   * Add me to the d/ section of d/copyright
   * d/copyright: http > https
   * d/rules: Add hardening
+  * Add d/salsa-ci.yml
   * Add d/upstream/metadata
 
- -- Dennis Braun <d_braun@kabelmail.de>  Fri, 23 Oct 2020 22:49:29 +0200
+ -- Dennis Braun <d_braun@kabelmail.de>  Fri, 23 Oct 2020 22:57:32 +0200
 
 soundtouch (2.1.2+ds1-1) unstable; urgency=medium
 
