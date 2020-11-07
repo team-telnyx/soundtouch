@@ -1,0 +1,20 @@
+#!/bin/sh
+
+set -e
+
+echo '(1/3) Copy beats.wav from csound-doc'
+cp /usr/share/doc/csound-doc/html/examples/beats.wav.gz .
+gunzip beats.wav.gz
+
+echo '(2/3) Stretch beats.wav from 119.9 BPM to 89.9 BPM'
+soundstretch beats.wav beats_stretched.wav -bpm=89.93
+
+# Test the result
+echo '(3/3) Check with sox and bpm-tools if the BPM is correct'
+if sox -V1 "beats_stretched.wav" -r 44100 -e float -c 1 -t raw - | bpm | grep '89.930'; then
+	echo 'bpm-tools successfully detected 89.9 BPM'
+	exit 0
+else
+	echo 'Unsuccessfully :('
+	exit 1
+fi

@@ -1,3 +1,3 @@
-Tests: stretch
-Depends: @, csound-doc, gzip
+Tests: beats-stretch
+Depends: @, bpm-tools, csound-doc, gzip, sox
 Restrictions: allow-stderr
