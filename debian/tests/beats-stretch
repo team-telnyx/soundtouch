@@ -11,7 +11,7 @@ soundstretch beats.wav beats_stretched.wav -bpm=89.93
 
 # Test the result
 echo '(3/3) Check with sox and bpm-tools if the BPM is correct'
-if sox -V1 "beats_stretched.wav" -r 44100 -e float -c 1 -t raw - | bpm | grep '89.930'; then
+if [ $(sox -V1 'beats_stretched.wav' -r 44100 -e float -c 1 -t raw - | bpm) = '89.930' ]; then
 	echo 'bpm-tools successfully detected 89.9 BPM'
 	exit 0
 else
