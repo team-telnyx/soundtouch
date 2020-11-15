@@ -1,5 +1,10 @@
 #!/bin/sh
 
+# Author: Dennis Braun <d_braun@kabelmail.de>
+#
+# This test stretches a beat from 119.9 BPM to 89.9 BPM
+# and the BPM of the output file is tested by sox and bpm-tools.
+
 set -e
 
 echo '(1/3) Copy beats.wav from csound-doc'
