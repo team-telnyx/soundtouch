@@ -8,7 +8,7 @@ soundtouch (2.2+ds1-1) unstable; urgency=medium
   * Add an soundstretch autopkgtest
   * Add me as uploader
   * Bump dh-compat to 13
-  * Bump S-V to 4.5.0
+  * Bump S-V to 4.5.1
   * Update d/copyright year
   * Add me to the d/ section of d/copyright
   * d/copyright: http > https
@@ -16,7 +16,7 @@ soundtouch (2.2+ds1-1) unstable; urgency=medium
   * Add d/salsa-ci.yml
   * Add d/upstream/metadata
 
- -- Dennis Braun <d_braun@kabelmail.de>  Fri, 23 Oct 2020 22:57:32 +0200
+ -- Dennis Braun <d_braun@kabelmail.de>  Thu, 19 Nov 2020 16:11:16 +0100
 
 soundtouch (2.1.2+ds1-1) unstable; urgency=medium
 
