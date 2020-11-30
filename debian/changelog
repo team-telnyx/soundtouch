@@ -16,6 +16,9 @@ soundtouch (2.2+ds1-1) unstable; urgency=medium
   * Add d/salsa-ci.yml
   * Add d/upstream/metadata
 
+  [ Sebastian Ramacher ]
+  * debian/libsoundtouch.maintscript: Remove obsolete maintscript
+
  -- Dennis Braun <d_braun@kabelmail.de>  Thu, 19 Nov 2020 16:11:16 +0100
 
 soundtouch (2.1.2+ds1-1) unstable; urgency=medium
