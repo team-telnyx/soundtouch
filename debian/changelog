@@ -1,3 +1,10 @@
+soundtouch (2.2+ds1-2) unstable; urgency=medium
+
+  * Team upload
+  * debian/rules: Disable neon on armhf (Closes: #987534)
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Mon, 26 Apr 2021 10:14:22 +0200
+
 soundtouch (2.2+ds1-1) unstable; urgency=medium
 
   [ Ondřej Nový ]
