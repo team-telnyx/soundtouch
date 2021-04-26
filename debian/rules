@@ -5,8 +5,15 @@
 
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
+ifeq (,$(filter-out armhf,$(DEB_HOST_ARCH)))
+confflags += --disable-neon-optimizations
+endif
+
 %:
 	dh $@
+
+override_dh_auto_configure:
+	dh_auto_configure -- ${confflags}
 
 override_dh_makeshlibs:
 	dh_makeshlibs -plibsoundtouch1 -V 'libsoundtouch1 (>= 2.0.0)'
