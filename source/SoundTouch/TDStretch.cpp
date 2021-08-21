@@ -92,11 +92,6 @@ TDStretch::TDStretch() : FIFOProcessor(&outputBuffer)
     bAutoSeqSetting = true;
     bAutoSeekSetting = true;
 
-    maxnorm = 0;
-    maxnormf = 1e8;
-
-    skipFract = 0;
-
     tempo = 1.0f;
     setParameters(44100, DEFAULT_SEQUENCE_MS, DEFAULT_SEEKWINDOW_MS, DEFAULT_OVERLAP_MS);
     setTempo(1.0f);
@@ -223,6 +218,9 @@ void TDStretch::clearInput()
     inputBuffer.clear();
     clearMidBuffer();
     isBeginning = true;
+    maxnorm = 0;
+    maxnormf = 1e8;
+    skipFract = 0;
 }
 
 
@@ -675,7 +673,7 @@ void TDStretch::processSamples()
             // Adjust processing offset at beginning of track by not perform initial overlapping
             // and compensating that in the 'input buffer skip' calculation
             isBeginning = false;
-            int skip = (int)(tempo * overlapLength + 0.5);
+            int skip = (int)(tempo * overlapLength + 0.5 * seekLength + 0.5);
 
             #ifdef ST_SIMD_AVOID_UNALIGNED
             // in SIMD mode, round the skip amount to value corresponding to aligned memory address
@@ -689,7 +687,10 @@ void TDStretch::processSamples()
             }
             #endif
             skipFract -= skip;
-            assert(nominalSkip >= -skipFract);
+            if (skipFract <= -nominalSkip)
+            {
+                skipFract = -nominalSkip;
+            }
         }
 
         // ... then copy sequence samples from 'inputBuffer' to output:

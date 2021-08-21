@@ -47,7 +47,7 @@ typedef unsigned long   ulong;
 #define SOUNDTOUCH_ALIGN_POINTER_16(x)      ( ( (ulongptr)(x) + 15 ) & ~(ulongptr)15 )
 
 
-#if (defined(__GNUC__) && !defined(ANDROID))
+#if (defined(__GNUC__) && !defined(ANDROID) && !defined(CMAKE))
     // In GCC, include soundtouch_config.h made by config scritps.
     // Skip this in Android compilation that uses GCC but without configure scripts.
     #include "soundtouch_config.h"
@@ -121,10 +121,10 @@ namespace soundtouch
 
     #endif
 
-    // If defined, allows the SIMD-optimized routines to take minor shortcuts 
-    // for improved performance. Undefine to require faithfully similar SIMD 
-    // calculations as in normal C implementation.
-    #define SOUNDTOUCH_ALLOW_NONEXACT_SIMD_OPTIMIZATION    1
+    // If defined, allows the SIMD-optimized routines to skip unevenly aligned
+    // memory offsets that can cause performance penalty in some SIMD implementations.
+    // Causes slight compromise in sound quality.
+    // #define SOUNDTOUCH_ALLOW_NONEXACT_SIMD_OPTIMIZATION    1
 
 
     #ifdef SOUNDTOUCH_INTEGER_SAMPLES
@@ -166,7 +166,7 @@ namespace soundtouch
         #endif
     #endif
 
-};
+}
 
 // define ST_NO_EXCEPTION_HANDLING switch to disable throwing std exceptions:
 // #define ST_NO_EXCEPTION_HANDLING    1
