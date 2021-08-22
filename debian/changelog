@@ -1,3 +1,10 @@
+soundtouch (2.3.0+ds1-1) UNRELEASED; urgency=medium
+
+  * New upstream version 2.3.0+ds1
+  * d/control: Bump S-V to 4.6.0
+
+ -- Dennis Braun <d_braun@kabelmail.de>  Sun, 22 Aug 2021 15:11:22 +0200
+
 soundtouch (2.2+ds1-2) unstable; urgency=medium
 
   * Team upload
