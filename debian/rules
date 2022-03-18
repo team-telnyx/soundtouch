@@ -9,6 +9,8 @@ ifeq (,$(filter-out armhf,$(DEB_HOST_ARCH)))
 confflags += --disable-neon-optimizations
 endif
 
+confflags += --enable-integer-samples
+
 %:
 	dh $@
 
