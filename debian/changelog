@@ -1,3 +1,18 @@
+soundtouch (2.3.2+ds1-1) UNRELEASED; urgency=medium
+
+  [ Andrea Pappacoda ]
+  * d/watch: moved to codeberg.org
+
+  [ Sam Q ]
+  * Replace watch
+
+  [ Dennis Braun ]
+  * New upstream version 2.3.2+ds1
+  * d/watch: Add dversionmangle=auto
+  * Bump Standards-Version to 4.6.1
+
+ -- Dennis Braun <d_braun@kabelmail.de>  Tue, 08 Nov 2022 19:15:30 +0100
+
 soundtouch (2.3.1+ds1-1) unstable; urgency=medium
 
   * New upstream version 2.3.1+ds1
