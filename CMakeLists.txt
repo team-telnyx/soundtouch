@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.1)
-project(SoundTouch VERSION 2.3.1 LANGUAGES CXX)
+project(SoundTouch VERSION 2.3.2 LANGUAGES CXX)
 
 include(GNUInstallDirs)
 
@@ -59,7 +59,7 @@ else()
   target_compile_definitions(SoundTouch PRIVATE SOUNDTOUCH_FLOAT_SAMPLES)
 endif()
 
-if(CMAKE_SYSTEM_PROCESSOR MATCHES "^(armv7.*|armv8.*)$")
+if(CMAKE_SYSTEM_PROCESSOR MATCHES "^(armv7.*|armv8.*|aarch64.*)$")
   set(NEON_CPU ON)
 else()
   set(NEON_CPU OFF)
@@ -69,6 +69,12 @@ option(NEON "Use ARM Neon SIMD instructions if in ARM CPU" ON)
 if(${NEON} AND ${NEON_CPU})
   target_compile_definitions(SoundTouch PRIVATE SOUNDTOUCH_USE_NEON)
   target_compile_options(SoundTouch PRIVATE -mfpu=neon)
+endif()
+
+find_package(OpenMP)
+option(OPENMP "Use parallel multicore calculation through OpenMP" OFF)
+if(OPENMP AND OPENMP_FOUND)
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
 endif()
 
 install(
@@ -105,6 +111,9 @@ if(SOUNDSTRETCH)
   target_compile_definitions(soundstretch PRIVATE ${COMPILE_DEFINITIONS})
   target_compile_options(soundstretch PRIVATE ${COMPILE_OPTIONS})
   target_link_libraries(soundstretch PRIVATE SoundTouch)
+  if(INTEGER_SAMPLES)
+    target_compile_definitions(soundstretch PRIVATE SOUNDTOUCH_INTEGER_SAMPLES)
+  endif()
 
   install(TARGETS soundstretch
     DESTINATION bin
