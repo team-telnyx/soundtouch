@@ -10,8 +10,9 @@ soundtouch (2.3.2+ds1-1) unstable; urgency=medium
   * New upstream version 2.3.2+ds1
   * d/watch: Add dversionmangle=auto
   * Bump Standards-Version to 4.6.1
+  * Change my email address to snd@debian.org
 
- -- Dennis Braun <d_braun@kabelmail.de>  Wed, 09 Nov 2022 17:03:02 +0100
+ -- Dennis Braun <snd@debian.org>  Wed, 09 Nov 2022 17:03:02 +0100
 
 soundtouch (2.3.1+ds1-1) unstable; urgency=medium
 
