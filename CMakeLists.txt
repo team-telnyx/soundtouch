@@ -1,13 +1,20 @@
 cmake_minimum_required(VERSION 3.1)
-project(SoundTouch VERSION 2.3.2 LANGUAGES CXX)
+project(SoundTouch VERSION 2.3.3 LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 17)
 
 include(GNUInstallDirs)
 
+set(COMPILE_OPTIONS)
+
 if(MSVC)
   set(COMPILE_DEFINITIONS /O2 /fp:fast)
-  set(COMPILE_OPTIONS )
 else()
-  set(COMPILE_OPTIONS -Ofast)
+  list(APPEND COMPILE_OPTIONS -Wall -Wextra -Wzero-as-null-pointer-constant -Wno-unknown-pragmas)
+  if(EMSCRIPTEN)
+    list(APPEND COMPILE_OPTIONS -O3)
+  else()
+    list(APPEND COMPILE_OPTIONS -Ofast)
+  endif()
 endif()
 
 #####################
@@ -68,7 +75,9 @@ endif()
 option(NEON "Use ARM Neon SIMD instructions if in ARM CPU" ON)
 if(${NEON} AND ${NEON_CPU})
   target_compile_definitions(SoundTouch PRIVATE SOUNDTOUCH_USE_NEON)
-  target_compile_options(SoundTouch PRIVATE -mfpu=neon)
+  if(NOT CMAKE_SYSTEM_PROCESSOR MATCHES "^aarch64.*$")
+    target_compile_options(SoundTouch PRIVATE -mfpu=neon)
+  endif()
 endif()
 
 find_package(OpenMP)
