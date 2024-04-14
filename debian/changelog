@@ -1,3 +1,10 @@
+soundtouch (2.3.3+ds-1) UNRELEASED; urgency=medium
+
+  * New upstream version 2.3.3+ds
+  * Set repacksuffix to +ds
+
+ -- Dennis Braun <snd@debian.org>  Sun, 14 Apr 2024 11:10:35 +0200
+
 soundtouch (2.3.2+ds1-1) unstable; urgency=medium
 
   [ Andrea Pappacoda ]
