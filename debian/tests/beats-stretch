@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 
-# Author: Dennis Braun <d_braun@kabelmail.de>
+# Author: Dennis Braun <snd@debian.org>
 #
 # This test stretches a beat from 119.9 BPM to 97 BPM
 # and the BPM of the output file is tested by sox and bpm-tools.
@@ -8,23 +8,23 @@
 set -e
 
 bpm=97
-regex="($bpm\.[0-4][0-9][0-9])"
+regex="($bpm\.[0-4]{1,3})"
 
-echo '(1/3) Copy beats.wav from csound-doc'
+echo '(1/3) Copy beats.wav.gz from csound-doc and unpack the wav file'
 cp /usr/share/doc/csound-doc/html/examples/beats.wav.gz .
-gunzip beats.wav.gz
+gunzip -f beats.wav.gz
 
 echo '(2/3) Stretch beats.wav from 119.9 BPM to' $bpm 'BPM'
 soundstretch beats.wav beats_stretched.wav -bpm=$bpm
 
-result="$(sox -V1 'beats_stretched.wav' -r 44100 -e float -c 1 -t raw - | bpm)"
+result=$(sox -V1 'beats_stretched.wav' -r 44100 -e float -c 1 -t raw - | bpm)
 
 # Test the result
 echo '(3/3) Check with sox and bpm-tools if the BPM is correct'
-if [[ $result =~ $regex ]]; then
-	echo 'Successfully detected' $result 'BPM'
-	exit 0
+if echo "$result" | grep -Eq "$regex"; then
+    echo 'Successfully detected' "$result" 'BPM'
+    exit 0
 else
-	echo 'Unsuccessfully :( The result is' $result 'BPM'
-	exit 1
+    echo 'Failed :( The result is' "$result" 'BPM, but it should be around' "$bpm" 'BPM'
+    exit 1
 fi
