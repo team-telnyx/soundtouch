@@ -1,3 +1,11 @@
+soundtouch (2.4.0+ds-1) UNRELEASED; urgency=medium
+
+  * New upstream version 2.4.0+ds
+  * Bump Standards-Version to 4.7.2
+  * Bump my d/copyright year
+
+ -- Dennis Braun <snd@debian.org>  Wed, 09 Apr 2025 19:53:36 +0200
+
 soundtouch (2.3.3+ds-1) unstable; urgency=medium
 
   * New upstream version 2.3.3+ds
